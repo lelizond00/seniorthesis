@@ -2,7 +2,7 @@
       name:  <unnamed>
        log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofiles/logs/2019_Data_Complete.log
   log type:  text
- opened on:  27 Aug 2022, 16:28:20
+ opened on:  27 Aug 2022, 17:26:47
 
 . 
 . clear all
@@ -33,16 +33,6 @@ file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/
 . cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Prog_gest_agua_cngmd2019_dbf/Bases_Datos"                      
 >   
 /Users/luiselizondogracia/Documents/GitHub/seniorthesis/data/original/2019/Prog_gest_agua_cngmd2019_dbf/Bases_Datos
-
-. import dbase secc_viii_td_m5_2018_agua_prog.dbf
-(4 vars, 583 obs)
-
-. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Prog_gest_agua_cngmd2019_dbf/Bases_Datos/secc_viii_td_m5_2018
-> _agua_prog.dta", replace
-file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Prog_gest_agua_cngmd2019_dbf/Bases_Datos/secc_viii_td_m5_2018_ag
-> ua_prog.dta saved
-
-. clear
 
 . import dbase secc_viii_tr_m5_2018.dbf
 (6 vars, 2,463 obs)
@@ -82,5 +72,5 @@ file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2019/
       name:  <unnamed>
        log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofiles/logs/2019_Data_Complete.log
   log type:  text
- closed on:  27 Aug 2022, 16:28:20
+ closed on:  27 Aug 2022, 17:26:48
 ------------------------------------------------------------------------------------------------------------------------------------------------

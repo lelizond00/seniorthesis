@@ -1,35 +1,35 @@
 capture log close
 cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/dofiles/logs"
-log using 2019_Data_Complete.log, replace
+log using 2017_Data_Complete.log, replace
 
 clear all
 
 
 
-					* 2019 * Note, 2019 files contain data obtained during 2018!
+					* 2017 * Note, 2017 files contain data obtained during 2016!
 					
 					
 				
 					* Convert DBF to DTA files *
 
-cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Admin_agua_cngmd2019_dbf/Bases_Datos"			
-import dbase secc_iv_tr_m5_2018.dbf
-save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Admin_agua_cngmd2019_dbf/Bases_Datos/secc_iv_tr_m5_2018.dta", replace
+cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2017/Admin_agua_red_cngmd2017_dbf/Bases_Datos"			
+insheet using "secc_iv_tr_m5_2016.csv", comma clear
+save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2017/Admin_agua_red_cngmd2017_dbf/Bases_Datos/secc_iv_tr_m5_2016.dta", replace
 clear
 
-cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Prog_gest_agua_cngmd2019_dbf/Bases_Datos"			
-import dbase secc_viii_tr_m5_2018.dbf
-save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Prog_gest_agua_cngmd2019_dbf/Bases_Datos/secc_viii_tr_m5_2018.dta", replace
+cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2017/Prog_gest_aguapot_cngmd2017_dbf/Bases_Datos"			
+insheet using "secc_viii_tr_m5_2016.csv", comma clear
+save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2017/Prog_gest_aguapot_cngmd2017_dbf/Bases_Datos/secc_viii_tr_m5_2016.dta", replace
 clear
 
 					* Merger *
 clear
 
-cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2019"		
+cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2017"		
 * Merge #1 *	
-use "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Admin_agua_cngmd2019_dbf/Bases_Datos/secc_iv_tr_m5_2018.dta"
-merge 1:1 folio using "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2019/Prog_gest_agua_cngmd2019_dbf/Bases_Datos/secc_viii_tr_m5_2018.dta", gen(aaa111)
-save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2019/2019_Merged", replace	
+use "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2017/Admin_agua_red_cngmd2017_dbf/Bases_Datos/secc_iv_tr_m5_2016.dta"
+merge 1:1 aps_folio using "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2017/Prog_gest_aguapot_cngmd2017_dbf/Bases_Datos/secc_viii_tr_m5_2016.dta", gen(aaa111)
+save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2017/2017_Merged", replace	
 
 log close
 
