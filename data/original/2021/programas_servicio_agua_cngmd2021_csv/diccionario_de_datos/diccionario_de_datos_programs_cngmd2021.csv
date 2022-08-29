@@ -1,0 +1,13 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+plan_lap,Indica si se tenía en ejecución un plan de desarrollo a largo plazo para la prestación del servicio de agua potable y saneamiento,SECC VIII. 55,Numérico,1,0 al 2
+agua_nom,Indica que se proporcione el nombre del plan de desarrollo al menos de que se contará con él para la prestación del servicio de agua potable y saneamiento ,SECC VIII. 56,Carácter,5000,
+plan_dig,Indica diagnóstico como uno de los componentes que conforman el plan de agua y saneamiento a largo plazo,SECC VIII. 57,Carácter,3,"1, NA, NSS, ND, NULL"
+plan_pol,Indica políticas como uno de los componentes que conforman el plan de agua y saneamiento a largo plazo,SECC VIII. 57,Carácter,3,"1, NA, NSS, ND, NULL"
+plan_eje,Indica ejes estratégicos como uno de los componentes que conforman el plan de agua y saneamiento a largo plazo,SECC VIII. 57,Carácter,3,"1, NA, NSS, ND, NULL"
+plan_acc,Indica plan de acción como uno de los componentes que conforman el plan de agua y saneamiento a largo plazo,SECC VIII. 57,Carácter,3,"1, NA, NSS, ND, NULL"
+plan_eva,Indica evaluación como uno de los componentes que conforman el plan de agua y saneamiento a largo plazo,SECC VIII. 57,Carácter,3,"1, NA, NSS, ND, NULL"
+conslta,Indica si es posible consultar el plan mencionado anteriormente en algún portal web,SECC VIII. 58,Numérico,1,0 al 2
+agua_url,"Indica la dirección web, donde se proporciona la información",SECC VIII. 59,Carácter,5000,
+pro_agua,Indica si estuvo en aplicación algún programa orientado a la gestión sustentable del servicio de agua y saneamiento,SECC VIII. 60,Numérico,1,0 al 2
+num_prog,Indica el número de programas aplicados en el municipio o demarcación territorial,SECC VIII. 61,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"

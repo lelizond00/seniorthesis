@@ -1,0 +1,10 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_serv,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+tipotom2,Indica el tipo de toma sujeta a facturación bajo un esquema de servicio medido,SECC IV. 21,Numérico,1,0 al 5
+num_tom,Indica el número de tomas de la toma sujeta a facturación bajo un esquema de servicio medido,SECC IV. 21,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+recib_ex,Indica el número de recibos expedidos de la toma sujeta a facturación bajo un esquema de servicio medido,SECC IV. 21,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+mon_fact,Indica el monto facturado de la toma sujeta a facturación bajo un esquema de servicio medido,SECC IV. 21,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+mon_reca,Indica el monto recaudado de la toma sujeta a facturación bajo un esquema de servicio medido,SECC IV. 21,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+v_sum_m3,Indica el volumen suministrado m3 de la toma sujeta a facturación bajo un esquema de servicio medido,SECC IV. 21,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+frecfac2,Indica la frecuencia de facturación de la toma sujeta a facturación bajo un esquema de servicio medido,SECC IV. 21,Numérico,1,0 al 4

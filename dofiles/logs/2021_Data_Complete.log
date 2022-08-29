@@ -1,0 +1,119 @@
+------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofiles/logs/2021_Data_Complete.log
+  log type:  text
+ opened on:  28 Aug 2022, 22:06:54
+
+. 
+. clear all
+
+. 
+. 
+. 
+.                                         * 2021 * Note, 2021 files contain data obtained during 2020!
+.                                         
+.                                         
+.                                 
+.                                         * Convert DBF to DTA files *
+. 
+. cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos"                
+>   
+/Users/luiselizondogracia/Documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos
+
+. insheet using "admncion_cngmd2021.csv", comma clear
+(73 vars, 2,469 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd
+> 2021.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd202
+> 1.dta saved
+
+. insheet using "cuotafij_cngmd2021.csv", comma clear
+(10 vars, 3,982 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd
+> 2021.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd202
+> 1.dta saved
+
+. insheet using "mediadop_cngmd2021.csv", comma clear
+(12 vars, 12,017 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd
+> 2021.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd202
+> 1.dta saved
+
+. insheet using "reciboag_cngmd2021.csv", comma clear
+(6 vars, 29,534 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd
+> 2021.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd202
+> 1.dta saved
+
+. insheet using "servmedi_cngmd2021.csv", comma clear
+(9 vars, 2,271 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd
+> 2021.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd202
+> 1.dta saved
+
+. 
+. clear
+
+. 
+. cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos"       
+>           
+/Users/luiselizondogracia/Documents/GitHub/seniorthesis/data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos
+
+. insheet using "aguaprog_cngmd2021.csv", comma clear
+(23 vars, 434 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/aguap
+> rog_cngmd2021.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/aguaprog
+> _cngmd2021.dta saved
+
+. insheet using "programs_cngmd2021.csv", comma clear
+(12 vars, 2,469 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/progr
+> ams_cngmd2021.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/programs
+> _cngmd2021.dta saved
+
+. clear
+
+. 
+.                                         * Merger *
+. clear
+
+. 
+. cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2021"         
+/Users/luiselizondogracia/Documents/GitHub/seniorthesis/data/modified/2021
+
+. * Merge #1 *    
+. use "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd2
+> 021.dta"
+
+. merge 1:1 folio using "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2021/programas_servicio_agua_cngmd2021_csv/conjun
+> to_de_datos/programs_cngmd2021.dta", gen(aaa116)
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                             2,469  (aaa116==3)
+    -----------------------------------------
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2021/2021_Merged", replace  
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2021/2021_Merged.dta saved
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofiles/logs/2021_Data_Complete.log
+  log type:  text
+ closed on:  28 Aug 2022, 22:06:54
+------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,7 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_recibo,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+recibcon,Indica el concepto incluido en el recibo del agua ,SECC IV. 28,Numérico,2,0 al 12
+si_inclu,Indica si el concepto es incluido en el recibo del agua,SECC IV. 28,Carácter,3,"1, NA, NSS, ND, NULL"
+no_inclu,Indica que el concepto no es incluido en el recibo del agua,SECC IV. 28,Carácter,3,"1, NA, NSS, ND, NULL"
+no_aplic,Indica que no aplica el concepto o no se emite recibo de pago ,SECC IV. 28,Carácter,3,"1, NA, NSS, ND, NULL"

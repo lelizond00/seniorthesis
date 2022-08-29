@@ -1,0 +1,24 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_prgrm,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+pro_nomb,Indica el nombre del programa,SECC VIII.62,Carácter,5000,
+apl_amag,Indica ampliación de la red de agua como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_ragu,Indica rehabilitación de la red de agua como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_medi,Indica instalación de medidores como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_amdr,Indica ampliación de la red de drenaje como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_rdre,Indica rehabilitación de la red de drenaje como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_ctra,Indica construcción de plantas de tratamiento de aguas residuales como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_rtra,Indica rehabilitación de plantas de tratamiento de aguas residuales como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_drpl,Indica introducción o ampliación de drenaje pluvial como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_fhid,Indica conservación de fuentes hídricas como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_otro,Indica otro tipo como rubro de aplicación del programa,SECC VIII.62,Carácter,3,"1, NA, NSS, ND, NULL"
+apl_oesp,Indica especificar otro rubro de aplicación del programa,SECC VIII.62,Carácter,5000,
+prog_ins,Indica si el programa fue realizado con la partición de una instancia diferente del municipio o demarcación territorial,SECC VIII.62,Numérico,1,0 al 2
+prog_rec,Indica se especifique el monto de recursos aplicados en pesos,SECC VIII.62,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+gob_mun,Indica se registre el monto de recursos aplicados para gobierno municipal o de la demarcación territorial,SECC VIII.62,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+gob_est,Indica se registre el monto de recursos aplicados para gobierno estatal,SECC VIII.62,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+gob_fed,Indica se registre el monto de recursos aplicados para gobierno federal,SECC VIII.62,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+gob_extr,Indica se registre el monto de recursos aplicados para gobierno extranjero,SECC VIII.62,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+org_inte,Indica se registre el monto de recursos aplicados para organismo internacional,SECC VIII.62,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+org_ngna,Indica se registre el monto de recursos aplicados para organización no gubernamental nacional,SECC VIII.62,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+org_ngex,Indica se registre el monto de recursos aplicados para organización no gubernamental extranjera,SECC VIII.62,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"

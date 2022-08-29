@@ -1,0 +1,75 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+con_ex_p,"Indica la extensión en kilómetros para el tipo de red conducción de agua, al cierre del año 2020",SECC IV. 12,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+dis_ex_p,"Indica la extensión en kilómetros para el tipo de red distribución de agua, al cierre del año 2020",SECC IV. 12,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+res_ex_p,"Indica la extensión en kilómetros para la distribución de aguas residuales tratadas para reutilización, al cierre del año 2020",SECC IV. 12,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+con_re_p,"Indica la extensión rehabilitada en kilómetros para el tipo de red conducción de agua, durante el año 2020",SECC IV. 13,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+dis_re_p,"Indica la extensión rehabilitada en kilómetros para el tipo de red distribución de agua, durante el año 2020",SECC IV. 13,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+res_re_p,"Indica la extensión rehabilitada en kilómetros para la distribución de aguas residuales tratadas para reutilización, al cierre del año 2020",SECC IV. 13,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+totl_tom,Indica el número total de tomas que cubre el servicio de agua entubada de la red pública,SECC IV. 14,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tom_mun,Indica el número de tomas en la cabecera municipal que cubre el servicio de agua entubada de la red pública,SECC IV. 14,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tom_loc,Indica el número de tomas en el resto de localidades que cubre el servicio de agua entubada de la red pública,SECC IV. 14,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cm_dom,Indica el número de tomas de agua potable existentes de tipo doméstica y disponibilidad con medidor funcionando,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cms_do,Indica el número de tomas de agua potable existentes de tipo doméstica y disponibilidad con medidor sin funcionar,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_sm_dom,Indica el número de tomas de agua potable existentes de tipo doméstica y disponibilidad sin medidor,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cm_ind,Indica el número de tomas de agua potable existentes de tipo industrial y disponibilidad con medidor funcionando,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cms_in,Indica el número de tomas de agua potable existentes de tipo industrial y disponibilidad con medidor sin funcionar,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_sm_ind,Indica el número de tomas de agua potable existentes de tipo industrial y disponibilidad sin medidor,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cm_com,Indica el número de tomas de agua potable existentes de tipo comercial y disponibilidad con medidor funcionando,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cms_co,Indica el número de tomas de agua potable existentes de tipo comercial y disponibilidad con medidor sin funcionar,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_sm_com,Indica el número de tomas de agua potable existentes de tipo comercial y disponibilidad sin medidor,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cm_pub,Indica el número de tomas de agua potable existentes de tipo pública y disponibilidad con medidor funcionando,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cms_pu,Indica el número de tomas de agua potable existentes de tipo pública y disponibilidad con medidor sin funcionar,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_sm_pub,Indica el número de tomas de agua potable existentes de tipo pública y disponibilidad sin medidor,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cm_mix,Indica el número de tomas de agua potable existentes de tipo mixta y disponibilidad con medidor funcionando,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cms_mx,Indica el número de tomas de agua potable existentes de tipo mixta y disponibilidad con medidor sin funcionar,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_sm_mix,Indica el número de tomas de agua potable existentes de tipo mixta y disponibilidad sin medidor,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cm_tot,Indica el total de tomas con medidor funcionando,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_cms_to,Indica el total de tomas con medidor sin funcionar,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_sm_tot,Indica el total de tomas sin medidor,SECC IV. 15,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+factu_ag,Indica si facturan el servicio de agua de la red pública,SECC IV. 16,Numérico,1,0 al 2
+fac_cufi,Indica si facturan el servicio de agua de la red pública en base a una cuota fija,SECC IV. 17,Numérico,1,0 al 2
+razcufij,Indica la razón por la que se aplicó el cobro bajo un esquema de cuota fija,SECC IV. 19,Numérico,1,0 al 4
+c_fija_e,Indica se especifique otra razón por la que se aplicó el cobro bajo un esquema de cuota fija,SECC IV. 19,Carácter,5000,
+fac_srvm,Indica si facturan el servicio de agua de la red pública en base a un servicio medido,SECC IV. 20,Numérico,1,0 al 2
+aj_tarif,Indica si se ajustaron las tarifas de agua potable,SECC IV. 22,Numérico,1,0 al 2
+ajutarec,Indica el año en que se aplicó el ajuste más reciente a las tarifas de agua de la red pública,SECC IV. 23,Numérico,1,0 al 7
+ajtarcnf,"Indica de acuerdo a que se ajustaron las tarifas (comportamiento, variación, índices, revisiones etc.)",SECC IV. 24,Numérico,1,0 al 6
+aj_cnf_e,Indica se especifique otro criterio de ajuste a tarifas del agua potable de la red pública,SECC IV. 24,Carácter,5000,
+esq_agua,Indica si el prestador u operador del servicio de agua aplicó esquemas para garantizar el derecho humano al agua en los hogares que por sus condiciones socioeconómicas tienen dificultad para acceder y pagar el servicio,SECC IV. 26,Numérico,1,0 al 2
+boni_tar,Indica el número de tomas beneficiadas por el tipo de esquema bonificación de tarifas,SECC IV. 27,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+fon_soli,Indica el número de tomas beneficiadas por el tipo de esquema fondos de solidaridad,SECC IV. 27,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+fom_ahor,Indica el número de tomas beneficiadas por el tipo de esquema apoyos para fomentar el ahorro en el consumo de agua,SECC IV. 27,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+otro_esq,Indica el número de tomas beneficiadas por otro tipo de esquema,SECC IV. 27,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+oesq_esp,Indica se especifique el otro tipo de esquema,SECC IV. 27,Carácter,5000,
+el_capta,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 del <concepto 1> (consumo de energía eléctrica en equipos de bombeo en obras de toma para captación de agua),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+desin_ag,"Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 del <concepto 2> (consumo de cloro, gas cloro o reactivo similar utilizado para la desinfección de agua en obras de toma)",SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+el_siste,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 del <concepto 3> (consumo de energía eléctrica en sistemas de distribución),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+el_potab,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 4> (consumo de energía eléctrica en plantas potabilizadoras de agua),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+quim_pot,"Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 5> (agentes físico-químicos, reactivos e insumos similares utilizados 
+en plantas de potabilización)",SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+el_trata,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 6> (consumo de energía eléctrica en sitios o plantas de tratamiento de aguas residuales municipales),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+quim_tra,"Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 7> (agentes físico-químicos, reactivos e insumos similares utilizados en sitios o plantas de tratamiento de aguas residuales municipales)",SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+remu_agu,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 8> (remuneraciones pagadas por el servicio de agua de la red pública),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+remu_dre,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 9> (remuneraciones pagadas por el servicio de drenaje y alcantarillado),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+remu_tra,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 10> (remuneraciones pagadas por el servicio de tratamiento de aguas residuales municipales),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+der_expl,"Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 11> (derechos de explotación, uso o aprovechamiento de agua)",SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+der_cuer,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 12> (derechos de uso de cuerpos receptores de las descargas de aguas residuales),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+reha_man,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 13> (rehabilitación y mantenimiento de equipos),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+dep_acti,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 14> (depreciación de activos),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+otr_gast,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 15> (otros  gastos),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+total,Indica el valor monetario de los bienes y servicios consumidos en la prestación del servicio de agua potable y saneamiento durante el año 2020 <concepto 16> (total de gastos),SECC IV. 29,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ing_agua,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020  (ingresos por suministro de agua de la red pública),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+agua_tra,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (venta de agua tratada),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+saneamie,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (saneamiento),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+conexion,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (derechos de conexión),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+der_alca,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (derechos de alcantarillado),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+vnt_lodo,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (venta de lodos),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+agua_pip,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (distribución de agua por medio de pipas),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+otro_ing,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (otros ingresos por suministro de bienes y servicios),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+sub_fede,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (subsidios federales),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+sub_esta,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (subsidios estatales),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+sub_muni,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (subsidios municipales),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+multas,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (multas y recargos),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ej_anter,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (otros ingresos),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+total_in,Indica el ingreso por el suministro de agua potable y saneamiento durante el año 2020 (total de ingresos por suministro de bienes y servicios),SECC IV. 30,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"

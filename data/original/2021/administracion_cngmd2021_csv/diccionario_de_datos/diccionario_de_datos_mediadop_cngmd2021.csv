@@ -1,0 +1,13 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_medid,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+tipotom3,Indica el tipo de toma para las medidas adoptadas con los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma,SECC IV. 25,Numérico,1,0 al 5
+mult_rec,"Indica las medidas adoptadas en este caso multas o recargos, con los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma",SECC IV. 25,Carácter,3,"1, NA, NSS, ND, NULL"
+req_pago,"Indica las medidas adoptadas en este caso requerimientos de pago, con los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma",SECC IV. 25,Carácter,3,"1, NA, NSS, ND, NULL"
+conv_pag,"Indica las medidas adoptadas en este caso convenios o acuerdos de pago, con los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma",SECC IV. 25,Carácter,3,"1, NA, NSS, ND, NULL"
+redu_sum,"Indica las medidas adoptadas en este caso la reducción del suministro, con los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma",SECC IV. 25,Carácter,3,"1, NA, NSS, ND, NULL"
+susp_srv,"Indica las medidas adoptadas en este caso la suspensión del servicio, con los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma",SECC IV. 25,Carácter,3,"1, NA, NSS, ND, NULL"
+embargos,"Indica las medidas adoptadas en este caso embargos, con los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma",SECC IV. 25,Carácter,3,"1, NA, NSS, ND, NULL"
+otra_med,"Indica las medidas adoptadas en este caso otra nueva medida, para los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma",SECC IV. 25,Carácter,3,"1, NA, NSS, ND, NULL"
+o_med_es,Indica se especifique la nueva medida adoptada para los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma,SECC IV. 25,Carácter,5000,
+no_medid,Indica que no se tomó ninguna medida adoptada para los usuarios que no pagaron a tiempo el recibo del agua potable según el tipo de toma,SECC IV. 25,Carácter,3,"1, NA, NSS, ND, NULL"

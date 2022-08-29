@@ -1,0 +1,80 @@
+------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofiles/logs/2015_Data_Complete.log
+  log type:  text
+ opened on:  28 Aug 2022, 21:40:00
+
+. 
+. clear all
+
+. 
+. 
+. 
+. * 2015 * Note, 2015 files contain data obtained during 2014!
+
+. 
+. 
+. 
+. * Convert DBF to DTA files *
+
+. 
+. cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2015/Admin_agua_red_cngmd2015_dbf/Base_de_datos"
+/Users/luiselizondogracia/Documents/GitHub/seniorthesis/data/original/2015/Admin_agua_red_cngmd2015_dbf/Base_de_datos
+
+. import dbase secc_iv_tr_cngmd15_m5.dbf
+(22 vars, 2,457 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2015/Admin_agua_red_cngmd2015_dbf/Base_de_datos/secc_iv_tr_cngmd15
+> _m5.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2015/Admin_agua_red_cngmd2015_dbf/Base_de_datos/secc_iv_tr_cngmd15_m5
+> .dta saved
+
+. clear
+
+. 
+. cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2015/Prog_gest_aguapot_cngmd2015_dbf/Base_de_datos"
+/Users/luiselizondogracia/Documents/GitHub/seniorthesis/data/original/2015/Prog_gest_aguapot_cngmd2015_dbf/Base_de_datos
+
+. import dbase secc_viii_tr_cngmd15_m5.dbf
+(4 vars, 2,457 obs)
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2015/Prog_gest_aguapot_cngmd2015_dbf/Base_de_datos/secc_viii_tr_cn
+> gmd15_m5.dta", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2015/Prog_gest_aguapot_cngmd2015_dbf/Base_de_datos/secc_viii_tr_cngmd
+> 15_m5.dta saved
+
+. clear
+
+. 
+. * Merger *
+
+. clear
+
+. 
+. cd "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2015"
+/Users/luiselizondogracia/Documents/GitHub/seniorthesis/data/modified/2015
+
+. * Merge #1 *
+
+. use "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2015/Admin_agua_red_cngmd2015_dbf/Base_de_datos/secc_iv_tr_cngmd15_
+> m5.dta"
+
+. merge 1:1 FOLIO using "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/original/2015/Prog_gest_aguapot_cngmd2015_dbf/Base_de_dato
+> s/secc_viii_tr_cngmd15_m5.dta", gen(aaa111)
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                             2,457  (aaa111==3)
+    -----------------------------------------
+
+. save "/Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2015/2015_Merged", replace
+file /Users/luiselizondogracia/documents/GitHub/seniorthesis/data/modified/2015/2015_Merged.dta saved
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofiles/logs/2015_Data_Complete.log
+  log type:  text
+ closed on:  28 Aug 2022, 21:40:00
+------------------------------------------------------------------------------------------------------------------------------------------------

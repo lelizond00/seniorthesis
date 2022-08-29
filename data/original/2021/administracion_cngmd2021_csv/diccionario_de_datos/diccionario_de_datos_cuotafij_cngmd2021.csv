@@ -1,0 +1,11 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_cuota,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+tipotoma,Indica el tipo de toma sujeta a facturación bajo un esquema de cuota fija,SECC IV. 18,Numérico,1,0 al 5
+num_toma,Indica el número de tomas de la toma sujeta a facturación bajo un esquema de cuota fija,SECC IV. 18,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tomas_cm,Indica el número de tomas con medidor de la toma sujeta a facturación bajo un esquema de cuota fija,SECC IV. 18,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+reci_exp,Indica el número de recibos expedidos de la toma sujeta a facturación bajo un esquema de cuota fija,SECC IV. 18,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+mont_fac,Indica el monto facturado de la toma sujeta a facturación bajo un esquema de cuota fija,SECC IV. 18,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+mont_rec,Indica el monto recaudado de la toma sujeta a facturación bajo un esquema de cuota fija,SECC IV. 18,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+v_m3_sum,Indica el volumen suministrado m3 de la toma sujeta a facturación bajo un esquema de cuota fija,SECC IV. 18,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+frecfact,Indica la frecuencia de facturación de la toma sujeta a facturación bajo un esquema de cuota fija,SECC IV. 18,Numérico,1,0 al 4
