@@ -1,0 +1,4 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+ar_num,Indica el número de puntos de descarga de aguas residuales municipales sin tratamiento que  fueron utilizados  al cierre del año 2020,SECC VII. 53,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+sin_punt,Indica si no contaba con puntos de descarga de aguas residuales municipales sin tratamiento al cierre del año 2020,SECC VII. 53,Carácter,3,"1, NA, NSS, ND, NULL"

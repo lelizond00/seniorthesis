@@ -1,0 +1,7 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_resd,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+cve_geo,Indica la clave geográfica,,Carácter,10,
+res_nom,Indica el nombre de identificación del punto de descarga,SECC VII.54,Carácter,5000,
+res_caud,Indica el caudal de agua residual vertido sin tratamiento en litros por segundo,SECC VII.54,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+cuerprec,Indica el código del tipo de cuerpo receptor de aguas residuales vertidas sin tratamiento,SECC VII.54,Numérico,2,0 al 10

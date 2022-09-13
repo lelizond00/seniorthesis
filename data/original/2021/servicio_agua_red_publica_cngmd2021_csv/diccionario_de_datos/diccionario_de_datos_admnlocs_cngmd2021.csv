@@ -1,0 +1,6 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_local,Indica el id ,,Numérico,5,1 al 99999
+id_aps,Indica el id,,Numérico,5,1 al 99999
+localid,Indica la clave de la localidad ,SECC I. 2.1,Numérico,6,1 al 999999
+ag_dias,Indica el promedio de días a la semana en los que suministró agua a los usuarios durante el año 2020,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ag_horas,Indica el promedio de horas al día en las que se suministró agua a los usuarios durante el año 2020,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"

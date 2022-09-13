@@ -1,0 +1,11 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+agu_bloq,Indica si se compró o no agua en bloque para abastecer a la población del municipio o demarcación territorial durante el año 2020,SECC II.B. 4 ,Numérico,1,0 al 2
+ag_super,Indica si el agua en bloque adquirida provenía de fuentes superficiales,SECC II.B. 5,Numérico,1,0 al 2
+vo_super,Indica el volumen de agua (m3) para las aguas superficiales que se compraron durante el año 2020,SECC II.B. 6,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+vendsupr,Indica el tipo de vendedor que se utilizó para las aguas superficiales que se compraron durante el año 2020,SECC II.B. 7,Numérico,1,0 al 7
+ve_sup_e,Indica especificar otro tipo de vendedor que se utilizó para las aguas superficiales que se compraron durante el año 2020,SECC II.B. 7,Carácter,5000,
+ag_subte,Indica si el agua en bloque adquirida provenía de fuentes subterráneas,SECC II.B. 8,Numérico,1,0 al 2
+vo_subte,Indica el volumen de agua (m3) para las aguas subterráneas que se compraron durante el año 2020,SECC II.B. 9,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+vendsubt,Indica el tipo de vendedor que se utilizó para las aguas subterráneas que se compraron durante el año 2020,SECC II.B. 10,Numérico,1,0 al 7
+ve_sub_e,Indica especificar otro tipo de vendedor que se utilizó para las aguas subterráneas que se compraron durante el año 2020,SECC II.B. 10,Carácter,5000,

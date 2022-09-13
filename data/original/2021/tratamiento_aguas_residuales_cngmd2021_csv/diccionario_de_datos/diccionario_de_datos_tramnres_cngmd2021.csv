@@ -1,0 +1,20 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+trat_pro,Indica si las aguas residuales son sometidas a algún proceso de tratamiento,SECC VI. 47,Numérico,1,0 al 2
+no_e_tra,Indica las razones por las que no se trataron las aguas residuales:               no existen plantas de tratamiento,SECC VI. 48,Carácter,3,"1, NA, NSS, ND, NULL"
+pt_fu_op,Indica las razones por las que no se trataron las aguas residuales:               existen plantas de tratamiento fuera de operación,SECC VI. 48,Carácter,3,"1, NA, NSS, ND, NULL"
+nu_pt_fo,Indica el número de plantas de tratamiento fuera de operación ,SECC VI. 48,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+pt_const,Indica las razones por las que no se trataron las aguas residuales:               existen plantas de tratamiento en construcción,SECC VI. 48,Carácter,3,"1, NA, NSS, ND, NULL"
+nu_pt_cn,Indica el número de plantas de tratamiento en construcción ,SECC VI. 48,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+pt_re_am,Indica las razones por las que no se trataron las aguas residuales:               existen plantas de tratamiento en rehabilitación o ampliación,SECC VI. 48,Carácter,3,"1, NA, NSS, ND, NULL"
+nu_pt_ra,Indica el número de plantas de tratamiento en rehabilitación o ampliación,SECC VI. 48,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+pt_otr_r,Indica las razones por las que no se trataron las aguas residuales:               otra razón,SECC VI. 48,Carácter,3,"1, NA, NSS, ND, NULL"
+pt_ot_es,Indica especificar las razones por las que no se trataron las aguas residuales:                                         otra razón (especifique),SECC VI. 48,Carácter,5000,
+porctrat,Indica seleccionar el porcentaje de agua residual municipal que recibió tratamiento,SECC VI. 49,Numérico,1,0 al 5
+por_t_es,Menos de 40% (especifique) porcentaje de agua residual municipal que recibió tratamiento,SECC VI. 49,Carácter,5000,
+norectra,Indica el motivo principal por el que no recibió tratamiento el total de las aguas residuales municipales,SECC VI. 50,Numérico,1,0 al 4
+n_rec_es,Indica especificar otro motivo principal por el que no recibió tratamiento el total de las aguas residuales municipales,SECC VI. 50,Carácter,5000,
+tra_e_op,Indica el número de plantas o sitios de tratamiento de aguas residuales municipales en operación,SECC VI. 51,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tra_f_op,Indica el número de plantas o sitios de tratamiento de aguas residuales municipales fuera de operación,SECC VI. 51,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tr_re_am,Indica el número de plantas o sitios de tratamiento de aguas residuales municipales en rehabilitación o ampliación,SECC VI. 51,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tra_cons,Indica el número de plantas o sitios de tratamiento de aguas residuales municipales en construcción,SECC VI. 51,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"

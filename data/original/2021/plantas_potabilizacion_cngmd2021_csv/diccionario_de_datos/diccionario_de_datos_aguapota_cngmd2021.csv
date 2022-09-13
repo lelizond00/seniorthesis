@@ -1,0 +1,21 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+ag_potab,Indica la fracción de agua distribuida en el municipio o demarcación territorial por plantas de potabilización,SECC III. 11,Numérico,1,0 al 2
+no_ex_pl,"Indica las razones por las cuales no se potabilizó el agua: 
+no existen plantas de potabilización ",SECC III. 11.1,Carácter,3,"1, NA, NSS, ND, NULL"
+pl_fu_op,"Indica las razones por las cuales no se potabilizó el agua: 
+existen plantas de potabilización fuera de operación   ",SECC III. 11.1,Carácter,3,"1, NA, NSS, ND, NULL"
+pl_fu_nu,Indica el número de plantas de potabilización fuera de operación ,SECC III. 11.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+p_constr,"Indica las razones por las cuales no se potabilizó el agua: 
+existen plantas de potabilización en construcción",SECC III. 11.1,Carácter,3,"1, NA, NSS, ND, NULL"
+p_con_nu,Indica el número de plantas de potabilización en construcción,SECC III. 11.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+pl_re_am,"Indica las razones por las cuales no se potabilizó el agua: 
+existen plantas de potabilización en rehabilitación o ampliación  ",SECC III. 11.1,Carácter,3,"1, NA, NSS, ND, NULL"
+p_r_a_nu,Indica el número de plantas de potabilización en rehabilitación o ampliación,SECC III. 11.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+p_otr_ra,"Indica las razones por las cuales no se potabilizó el agua: 
+Otra razón",SECC III. 11.1,Carácter,3,"1, NA, NSS, ND, NULL"
+pl_o_esp,"Indica las razones por las cuales no se potabilizó el agua: 
+Otra razón (especifique)",SECC III. 11.1,Carácter,5000,
+nu_en_op,Indica el número de plantas de potabilización en operación,SECC III. 11.2,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+nu_fu_op,Indica el número de plantas de potabilización fuera de operación ,SECC III. 11.2,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+nu_const,Indica el número de plantas de potabilización en construcción,SECC III. 11.2,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"

@@ -1,0 +1,92 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_aps,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+cve_geo,Indica la clave geográfica,,Carácter,10,
+regjurid,Indica el régimen jurídico del prestador conforme al sector social al que pertenece,SECC I. 2.1,Numérico,2,0 al 15
+inico_aa,Indica el reporte de vigencia de la concesión para el sector privado del régimen jurídico: año de inicio,SECC I. 2.1,Carácter,4,
+terco_aa,Indica el reporte de vigencia de la concesión para el sector privado del régimen jurídico: año de termino,SECC I. 2.1,Carácter,4,
+inire_aa,Indica el reporte de vigencia  para el sector mixto del régimen jurídico: año de inicio,SECC I. 2.1,Carácter,4,
+terre_aa,Indica el reporte de vigencia  para el sector mixto del régimen jurídico: año de termino,SECC I. 2.1,Carácter,4,
+otr_publ,Indica otro diferente régimen de gestión bajo la cual operaba el prestador del servicio dependiendo al sector  <público>,SECC I. 2.1,Carácter,5000,
+otr_prva,Indica otro diferente régimen de gestión bajo la cual operaba el prestador del servicio dependiendo al sector  <privado>,SECC I. 2.1,Carácter,5000,
+otr_soci,Indica otro diferente régimen de gestión bajo la cual operaba el prestador del servicio dependiendo al sector  <social>,SECC I. 2.1,Carácter,5000,
+ambito,Indica el ámbito del servicio de agua potable de la red pública proporcionado por el prestador,SECC I. 2.1,Numérico,1,0 al 4
+agua_dia,Indica el promedio de días a la semana en los que suministró agua a los usuarios de la red pública durante el año 2020,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+agua_hor,Indica el promedio de horas al día en las que se suministró agua a los usuarios de la red pública durante el año 2020,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ag_pipas,Indica si o no se distribuye agua a usuarios domésticos a través de pipas,SECC I. 2.1,Numérico,1,0 al 2
+v_m3_pip,Indica el volumen promedio mensual de agua suministrada a través de pipas a usuarios domésticos o beneficiarios,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+vm3_desp,"Indica el volumen promedio mensual suministrado
+m3 para usuarios afectados por desperfectos en la red de agua",SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+viv_desp,Indica el número promedio mensual de viviendas para usuarios afectados por desperfectos en la red de agua,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+vm3_dnat,"Indica el volumen promedio mensual suministrado
+m3 para usuarios afectados por problemas en la red debido a desastres naturales",SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+viv_dnat,Indica el número promedio mensual de viviendas para usuarios afectados por problemas en la red debido a desastres naturales,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+vm3_vari,"Indica el volumen promedio mensual suministrado
+m3 para usuarios afectados por variaciones estacionales en la disponibilidad de agua",SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+viv_vari,Indica el número promedio mensual de viviendas para usuarios afectados por variaciones estacionales en la disponibilidad de agua,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+vm3_irre,"Indica el volumen promedio mensual suministrado
+m3 para viviendas en asentamientos irregulares, no cubiertas por la red de agua",SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+viv_irre,"Indica el número promedio mensual de viviendas para viviendas en asentamientos irregulares, no cubiertas por la red de agua",SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+otr_bene,Indica se especifique el otro usuario o beneficiario,SECC I. 2.1,Carácter,5000,
+vm3_otro,"Indica el volumen promedio mensual suministrado
+m3 para otro usuario o beneficiario",SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+viv_otro,Indica el número promedio mensual de viviendas para otro usuario o beneficiario,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tot_conf,Indica el número total del personal de confianza,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_conf_h,Indica los gerentes y directivos hombres de confianza,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_conf_m,Indica los gerentes y directivos mujeres de confianza,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_conf_h,Indica los empleados administrativos y contables hombres de confianza,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_conf_m,Indica los empleados administrativos y contables mujeres de confianza,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_conf_h,Indica los técnicos y operativos hombres confianza,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_conf_m,Indica los técnicos y operativos mujeres confianza,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tot_base,Indica el número total del personal de base o sindicalizado,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_base_h,Indica los gerentes y directivos hombres de base,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_base_m,Indica los gerentes y directivos mujeres de base,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_base_h,Indica los empleados administrativos y contables hombres de base,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_base_m,Indica los empleados administrativos y contables mujeres de base,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_base_h,Indica los técnicos y operativos hombres base,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_base_m,Indica los técnicos y operativos mujeres base,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tot_even,Indica el número total del personal eventual,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_even_h,Indica los gerentes y directivos hombres eventuales,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_even_m,Indica los gerentes y directivos mujeres eventuales,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_even_h,Indica los empleados administrativos y contables hombres eventuales,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_even_m,Indica los empleados administrativos y contables mujeres eventuales,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_even_h,Indica los técnicos y operativos hombres eventual,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_even_m,Indica los técnicos y operativos mujeres eventual,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tot_hono,Indica el número total del personal por honorarios,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_hono_h,Indica los gerentes y directivos hombres por honorarios,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_hono_m,Indica los gerentes y directivos mujeres por honorarios,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_hono_h,Indica los empleados administrativos y contables hombres por honorarios,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_hono_m,Indica los empleados administrativos y contables mujeres por honorarios,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_hono_h,Indica los técnicos y operativos hombres honorarios,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_hono_m,Indica los técnicos y operativos mujeres honorarios,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ot_reg_e,Indica la especificación de otro tipo de régimen de contratación,SECC I. 2.1,Carácter,5000,
+tot_o_re,Indica el número total del personal por otro régimen,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_otro_h,Indica los gerentes y directivos hombres por otro régimen,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_otro_m,Indica los gerentes y directivos mujeres por otro régimen,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_otro_h,Indica los empleados administrativos y contables hombres por otro régimen,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_otro_m,Indica los empleados administrativos y contables mujeres por otro régimen,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_otro_h,Indica los técnicos y operativos hombres por otro régimen,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_otro_m,Indica los técnicos y operativos mujeres por otro régimen,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tot_pers,Indica el número total de personal,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_desa_h,Indica los gerentes y directivos hombres,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+g_desa_m,Indica los gerentes y directivos mujeres,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_desa_h,Indica los empleados administrativos y contables hombres,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+a_desa_m,Indica los empleados administrativos y contables mujeres,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_desa_h,Indica los técnicos y operativos hombres,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+o_desa_m,Indica los técnicos y operativos mujeres,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+sexo,Indica el sexo del  director o gerente del prestador u operador del servicio de agua,SECC I. 2.1,Numérico,1,0 al 2
+aps_anos,Indica la antigüedad en años del director o gerente general del prestador u operador del servicio de agua en el puesto,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+aps_mes,"Indica la antigüedad en meses (al 31 de diciembre del año 2020), del director o gerente general del prestador u operador del servicio de agua en el puesto",SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+par_ciud,Indica si estuvo en operación algún tipo de espacio de participación ciudadana en la administración del servicio de agua potable,SECC I. 2.1,Numérico,1,0 al 2
+ciud_nom,Indica el nombre del órgano de participación ciudadana,SECC I. 2.1,Carácter,5000,
+inspartc,Indica la instancia de participación ciudadana,SECC I. 2.1,Numérico,1,0 al 3
+insrepng,Indica el procedimiento por el cual se designa a los representantes no gubernamentales que participan en esa instancia,SECC I. 2.1,Numérico,1,0 al 5
+ins_o_pr,Indica se especifique el otro procedimiento por el cual se designa a los representantes no gubernamentales que participan en esa instancia,SECC I. 2.1,Carácter,5000,
+totl_ins,Indica el número total de personas que integró la instancia de participación ciudadana,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+hombres,Indica el número total de hombres que integró la instancia de participación ciudadana,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+mujeres,Indica el número total de mujeres que integró la instancia de participación ciudadana,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+t_ng_ins,Indica el número total de personas no gubernamentales que integró la instancia de participación ciudadana,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+h_ng_ins,Indica el número total de hombres no gubernamentales que integró la instancia de participación ciudadana,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+m_ng_ins,Indica el número total de mujeres no gubernamentales que integró la instancia de participación ciudadana                      ,SECC I. 2.1,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+atribuci,Indica las atribuciones de los integrantes no gubernamentales,SECC I. 2.1,Numérico,1,0 al 3
+atrb_esp,Indica especificar las nuevas atribuciones de los integrantes no gubernamentales,SECC I. 2.1,Carácter,5000,

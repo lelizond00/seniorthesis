@@ -1,0 +1,12 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_dren,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+regjurid,Indica el régimen jurídico del prestador conforme al sector social al que pertenece,SECC V.46,Numérico,2,0 al 15
+dr_ini_a,Indica el reporte de vigencia de la concesión para el sector privado del régimen jurídico: año de inicio,SECC V.46,Carácter,4,
+dr_ter_a,Indica el reporte de vigencia de la concesión para el sector privado del régimen jurídico: año de termino,SECC V.46,Carácter,4,
+ini_re_a,Indica el reporte de vigencia  para el sector mixto del régimen jurídico: año de inicio,SECC V.46,Carácter,4,
+ter_re_a,Indica el reporte de vigencia  para el sector mixto del régimen jurídico: año de termino,SECC V.46,Carácter,4,
+ot_publi,Indica otro diferente régimen de gestión bajo la cual operaba el prestador del servicio dependiendo al sector <público>,SECC V.46,Carácter,5000,
+ot_priva,Indica otro diferente régimen de gestión bajo la cual operaba el prestador del servicio dependiendo al sector <privado>,SECC V.46,Carácter,5000,
+ot_socia,Indica otro diferente régimen de gestión bajo la cual operaba el prestador del servicio dependiendo al sector <social>,SECC V.46,Carácter,5000,
+ambito,Indica el ámbito del servicio de drenaje y alcantarillado de la red pública proporcionado por el prestador,SECC V.46,Numérico,1,0 al 4

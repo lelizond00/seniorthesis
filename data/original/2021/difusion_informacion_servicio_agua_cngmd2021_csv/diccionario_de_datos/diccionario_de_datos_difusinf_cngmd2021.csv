@@ -1,0 +1,30 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+dif_inf,Indica si se difundió información sobre sus actividades a través de un portal en internet,SECC IX. 63,Numérico,1,0 al 2
+dif_url,Indica la dirección url del portal en internet donde se difundió información sobre sus actividades ,SECC IX. 64,Carácter,5000,
+portinte,Indica si el portal en internet en el que se difunde la información es un sitio exclusivo o compartido,SECC IX. 65,Numérico,1,0 al 2
+edo_fina,Indica si se difundió información de los estados financieros,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+pre_serv,Indica si se difundió información de la infraestructura para la presentación del servicio de agua y saneamiento,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_prog,Indica si se difundió información de los planes y programas,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+in_efi,Indica si se difundió información de los indicadores de eficiencia,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+re_hid,Indica si se difundió información para el análisis sobre la situación local de los recursos hídricos,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+di_tari,Indica si se difundió información de tarifas,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+ben_subs,Indica si se difundió información de los beneficiarios de subsidios,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+obr_proc,Indica si se difundió información acerca de obras en proceso,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+di_otro,Indica si se difundió información acerca de otro tema,SECC IX. 66,Carácter,3,"1, NA, NSS, ND, NULL"
+d_otr_es,Indica especificar otro tema o asunto sobre el cual se haya difundido información,SECC IX. 66,Carácter,5000,
+sif_opn,Indica si se recolecta información sobre la opinión de los usuarios en relación al servicio de agua potable,SECC IX. 67,Numérico,1,0 al 2
+opn_impl,Indica si se utilizo implementación de un buzón de quejas y sugerencias como medio para el levantamiento de opiniones de los usuarios,SECC IX. 68,Carácter,3,"1, NA, NSS, ND, NULL"
+opn_bita,Indica si se utilizo generación de bitácoras de quejas captadas a través de centro de atención telefónica como medio para el levantamiento de opiniones de los usuarios,SECC IX. 68,Carácter,3,"1, NA, NSS, ND, NULL"
+opn_moni,Indica si se utilizo monitoreo de quejas en medios de información como medio para el levantamiento de opiniones de los usuarios,SECC IX. 68,Carácter,3,"1, NA, NSS, ND, NULL"
+opn_apcu,Indica si se utilizo aplicación de cuestionarios en oficinas como medio para el levantamiento de opiniones de los usuarios,SECC IX. 68,Carácter,3,"1, NA, NSS, ND, NULL"
+opn_entr,Indica si se utilizo entrevistas de seguimiento a servicios solicitados como medio para el levantamiento de opiniones de los usuarios,SECC IX. 68,Carácter,3,"1, NA, NSS, ND, NULL"
+opn_apen,Indica si se utilizo aplicación de encuesta por muestreo como medio para el levantamiento de opiniones de los usuarios,SECC IX. 68,Carácter,3,"1, NA, NSS, ND, NULL"
+opn_otrm,Indica si se utilizo otro método como medio para el levantamiento de opiniones de los usuarios,SECC IX. 68,Carácter,3,"1, NA, NSS, ND, NULL"
+opin_esp,Indica especificar otro método utilizado como medio para el levantamiento de opiniones de los usuarios,SECC IX. 68,Carácter,5000,
+rep_quej,Indica los aspectos sobre los cuales se recolectó información de la opinión de los usuarios.  Atención de reportes y quejas distintos de fugas o problemas de la red,SECC IX. 69,Carácter,3,"1, NA, NSS, ND, NULL"
+fuga_pro,Indica los aspectos sobre los cuales se recolectó información de la opinión de los usuarios.  Atención de fugas o problemas de la red,SECC IX. 69,Carácter,3,"1, NA, NSS, ND, NULL"
+atn_most,Indica los aspectos sobre los cuales se recolectó información de la opinión de los usuarios. Atención en mostrador,SECC IX. 69,Carácter,3,"1, NA, NSS, ND, NULL"
+carc_liq,"Indica los aspectos sobre los cuales se recolectó información de la opinión de los usuarios. Características del líquido (olor, color, sabor, temperatura, sólidos suspendidos, entre otros)",SECC IX. 69,Carácter,3,"1, NA, NSS, ND, NULL"
+opn_otro,Indica los aspectos sobre los cuales se recolectó información de la opinión de los usuarios. Otro aspecto,SECC IX. 69,Carácter,3,"1, NA, NSS, ND, NULL"
+es_ot_as,Indica especificar el otro aspecto sobre los cuales se recolectó información de la opinión de los usuarios,SECC IX. 69,Carácter,5000,

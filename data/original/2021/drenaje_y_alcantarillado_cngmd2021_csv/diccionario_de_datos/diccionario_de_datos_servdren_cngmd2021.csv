@@ -1,0 +1,36 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+serv_dre,Indica si se prestaba o no el servicio de drenaje y alcantarillado de la red pública,SECC V. 31,Numérico,1,0 al 2
+dren_cab,Indica el porcentaje de la población del municipio o de la demarcación territorial que tenia acceso al servicio de drenaje y alcantarillado de la red pública,SECC V. 32,Carácter,20,"0-100, NA, NSS, ND, NULL"
+no_saben,"Indica si sabe o no, el porcentaje de la población cubierto por el servicio de drenaje y alcantarillado de la red pública, para el resto del municipio",SECC V. 32,Carácter,3,"1, NA, NSS, ND, NULL"
+dren_plu,"Indica si la red de drenaje y alcantarillado, contaba con sistemas para drenaje pluvial separado de la red de drenaje sanitario",SECC V. 33,Numérico,1,0 al 2
+prodrplu,Indica el propósito principal de la red de drenaje pluvial,SECC V. 34,Numérico,1,0 al 4
+pr_plu_e,Indica se especifique otro propósito de la red de drenaje pluvial ,SECC V. 34,Carácter,5000,
+trat_plu,Indica si se recibe o no tratamiento al agua captada a través de la red de drenaje pluvial,SECC V. 35,Numérico,1,0 al 2
+tra_apli,Indica se describa el proceso de tratamiento que se aplica al agua captada a través del drenaje pluvial,SECC V. 36,Carácter,5000,
+usoprinc,Indica el uso principal del agua captada a través de la red de drenaje pluvial que recibe tratamiento,SECC V. 37,Numérico,1,0 al 6
+uso_e_pr,Indica se especifique otro uso principal del agua captada a través de la red de drenaje pluvial que recibe tratamiento,SECC V. 37,Carácter,5000,
+plu_suel,Indica si el agua de la red de drenaje pluvial sin tratamiento se conduce a suelo o barranca ,SECC V. 38,Carácter,3,"1, NA, NSS, ND, NULL"
+plu_rios,Indica si el agua de la red de drenaje pluvial sin tratamiento se conduce a ríos o arroyo ,SECC V. 38,Carácter,3,"1, NA, NSS, ND, NULL"
+plu_mar,Indica si el agua de la red de drenaje pluvial sin tratamiento se conduce al mar,SECC V. 38,Carácter,3,"1, NA, NSS, ND, NULL"
+plu_play,Indica si el agua de la red de drenaje pluvial sin tratamiento se conduce a la playa,SECC V. 38,Carácter,3,"1, NA, NSS, ND, NULL"
+plu_este,"Indica si el agua de la red de drenaje pluvial sin tratamiento se conduce a estero, marisma ",SECC V. 38,Carácter,3,"1, NA, NSS, ND, NULL"
+plu_lago,Indica si el agua de la red de drenaje pluvial sin tratamiento se conduce a lagos urbanos ,SECC V. 38,Carácter,3,"1, NA, NSS, ND, NULL"
+plu_terr,Indica si el agua de la red de drenaje pluvial sin tratamiento se conduce a terrenos agrícolas,SECC V. 38,Carácter,3,"1, NA, NSS, ND, NULL"
+plu_otro,Indica si el agua de la red de drenaje pluvial sin tratamiento se conduce a otro,SECC V. 38,Carácter,3,"1, NA, NSS, ND, NULL"
+plu_o_es,Indica se especifique a donde se conduce el agua de la red de drenaje pluvial sin tratamiento ,SECC V. 38,Carácter,5000,
+dren_ext,Indica la extensión de la red del drenaje pluvial en kilómetros,SECC V. 39,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ext_reha,Indica la extensión rehabilitada del drenaje pluvial en kilómetros,SECC V. 40,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ext_sani,Indica la extensión de las redes de drenaje sanitario en kilómetros,SECC V. 41,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ext_dren,Indica la extensión rehabilitada en la red tipo tubería de drenaje o alcantarillado sanitario,SECC V. 42,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ext_cole,Indica la extensión rehabilitada en la red tipo tubería de colectores,SECC V. 42,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tot_conx,Indica el número total de conexiones que cubre el servicio de drenaje y alcantarillado,SECC V. 43,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+con_cabe,Indica el número de conexiones en la cabecera municipal que cubre el servicio de drenaje y alcantarillado,SECC V. 43,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+conx_loc,Indica el número de conexiones en el resto de localidades del municipio o demarcación territorial que cubre el servicio de drenaje y alcantarillado,SECC V. 43,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+conx_dom,Indica el número de conexiones a la red de drenaje y alcantarillado por tipo de conexión:                       1. doméstica,SECC V. 44,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+conx_ind,Indica el número de conexiones a la red de drenaje y alcantarillado por tipo de conexión:                      2. industrial,SECC V. 44,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+conx_com,Indica el número de conexiones a la red de drenaje y alcantarillado por tipo de conexión:                        3. comercial,SECC V. 44,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+conx_pub,Indica el número de conexiones a la red de drenaje y alcantarillado por tipo de conexión:                      4. pública,SECC V. 44,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+conx_mix,Indica el número de conexiones a la red de drenaje y alcantarillado por tipo de conexión:                       5. mixta,SECC V. 44,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+conx_tot,Indica el total de número de conexiones a la red de drenaje y alcantarillado por tipo de usuario                                         ,SECC V. 44,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+prest_nu,Indica el número de prestadores u operadores del servicio de drenaje y alcantarillado que operaban en el municipio o demarcación territorial,SECC V. 45,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"

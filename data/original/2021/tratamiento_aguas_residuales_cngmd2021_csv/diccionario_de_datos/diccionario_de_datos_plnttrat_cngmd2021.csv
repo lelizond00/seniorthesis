@@ -1,0 +1,142 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_tra,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+cve_geo,Indica la clave geográfica,,Carácter,10,
+tra_nom,Indica el nombre del sitio o planta de tratamiento,SECC VI.52,Carácter,5000,
+pltraope,Indica si la planta estaba en operación al cierre del año 2020,SECC VI.52,Numérico,1,0 al 2
+rznnoptr,Indica señalar la razón principal por la que no operó la planta,SECC VI.52,Numérico,2,0 al 13
+razo_esp,Indica especificar otra razón principal por la que no operó la planta,SECC VI.52,Carácter,5000,
+regjurid,Indica el régimen jurídico del administrador del sitio o planta conforme al sector social al que pertenece,SECC VI.52,Numérico,2,0 al 15
+tr_ini_a,Indica el reporte de vigencia de la concesión para el sector privado del régimen jurídico: año de inicio,SECC VI.52,Carácter,4,
+tr_ter_a,Indica el reporte de vigencia de la concesión para el sector privado del régimen jurídico: año de termino,SECC VI.52,Carácter,4,
+ini_mi_a,Indica el reporte de vigencia  para el sector mixto del régimen jurídico: año de inicio,SECC VI.52,Carácter,4,
+ter_mi_a,Indica el reporte de vigencia  para el sector mixto del régimen jurídico: año de termino,SECC VI.52,Carácter,4,
+scr_pu,Indica otro diferente régimen de gestión bajo la cual operaba el administrador del sitio o planta dependiendo al sector <público>,SECC VI.52,Carácter,5000,
+scr_pr,Indica otro diferente régimen de gestión bajo la cual operaba el administrador del sitio o planta dependiendo al sector <privado>,SECC VI.52,Carácter,5000,
+scr_so,Indica otro diferente régimen de gestión bajo la cual operaba el administrador del sitio o planta dependiendo al sector <social>,SECC VI.52,Carácter,5000,
+aa_in_op,Indica el año de inicio de operaciones de la planta,SECC VI.52,Carácter,4,
+tra_cnal,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: canales de conducción revestidos,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_tnqu,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: piletas o tanques,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_emis,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: emisores,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_edif,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: edificios para controlar procesos,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_sube,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: subestación de energía eléctrica,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_lab,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: laboratorio,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_almc,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: almacén de reactivos químicos,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_pane,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: panel fotovoltaico,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_otra,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: otra infraestructura,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_espe,Indica especificar el otro tipo de infraestructura del sitio o planta de tratamiento,SECC VI.52,Carácter,5000,
+tra_ning,Indica si la Infraestructura disponible en el sitio o planta de tratamiento fue: ninguna de las anteriores,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_kwh,Indica el consumo de energía eléctrica utilizado para la planta de tratamiento en unidades físicas,SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tra_peso,Indica el consumo de energía eléctrica utilizado para la planta de tratamiento en unidades monetarias,SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+tra_ener,Indica que no se consumió energía eléctrica utilizada para la planta de tratamiento,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_cost,Indica los costos de operación y mantenimiento asociados al funcionamiento de la planta de tratamiento,SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+protrapl,Indica el proceso de tratamiento aplicado en el sitio o planta ,SECC VI.52,Numérico,2,0 al 33
+tra_oesp,Indica especificar el otro proceso de tratamiento aplicado en el sitio o planta ,SECC VI.52,Carácter,5000,
+capac_in,Indica la capacidad instalada en litros por segundo ,SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+cau_trat,"Indica la cantidad de agua residual tratada en el sitio o planta, mediante el caudal diario tratado (l/s)",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+datocaud,Indica de donde proviene el dato del caudal tratado,SECC VI.52,Numérico,1,0 al 2
+agresreu,Indica si el agua residual tratada es reutilizada,SECC VI.52,Numérico,1,0 al 3
+prind_o1,"<Opción 1>
+Indica procesos industriales como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_ind_o1,"<Opción 1>
+Indica el gasto en litros por segundo para procesos industriales",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+rverd_o1,"<Opción 1> 
+Indica riego de áreas verdes como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_ver_o1,"<Opción 1>
+Indica el gasto en litros por segundo para riego de áreas verdes",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ragri_o1,"<Opción 1>
+Indica riego agrícola como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_agr_o1,"<Opción 1>
+Indica el gasto en litros por segundo para riego agrícola",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+incen_o1,"<Opción 1>
+Indica control de incendios como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_inc_o1,"<Opción 1>
+Indica el gasto en litros por segundo para control de incendios",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+inter_o1,"<Opción 1>
+Indica intercambio de agua entre usuarios como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_int_o1,"<Opción 1>
+Indica el gasto en litros por segundo para intercambio de agua entre usuarios",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+otro_o1,"<Opción 1>
+Indica otro tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_otr_o1,"<Opción 1>
+Indica el gasto en litros por segundo para otro tipo de reutilización",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+otres_o1,"<Opción 1>
+Indica especificar el otro tipo de reutilización del agua tratada",SECC VI.52,Carácter,5000,
+prind_o2,"<Opción 2>
+Indica procesos industriales como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_ind_o2,"<Opción 2>
+Indica el gasto en litros por segundo para procesos industriales",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+rverd_o2,"<Opción 2> 
+Indica riego de áreas verdes como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_ver_o2,"<Opción 2>
+Indica el gasto en litros por segundo para riego de áreas verdes",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+ragri_o2,"<Opción 2>
+Indica riego agrícola como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_agr_o2,"<Opción 2>
+Indica el gasto en litros por segundo para riego agrícola",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+incen_o2,"<Opción 2>
+Indica control de incendios como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_inc_o2,"<Opción 2>
+Indica el gasto en litros por segundo para control de incendios",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+inter_o2,"<Opción 2>
+Indica intercambio de agua entre usuarios como un tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_int_o2,"<Opción 2>
+Indica el gasto en litros por segundo para intercambio de agua entre usuarios",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+otro_o2,"<Opción 2>
+Indica otro tipo de reutilización del agua tratada",SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+g_otr_o2,"<Opción 2>
+Indica el gasto en litros por segundo para otro tipo de reutilización",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+otres_o2,"<Opción 2>
+Indica especificar el otro tipo de reutilización del agua tratada",SECC VI.52,Carácter,5000,
+noreu_o3,"<Opción 2>
+Indica el destino del agua tratada no reutilizada de forma general",SECC VI.52,Numérico,1,0 al 8
+g_nreo3,"<Opción 2>
+Indica el gasto en litros por segundo para el agua tratada no reutilizada",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+nresp_o3,"<Opción 2>
+Indica especificar otro destino del agua tratada no reutilizada",SECC VI.52,Carácter,5000,
+e_sub_o3,"<Opción 2> 
+Indica si se utiliza un emisor submarino",SECC VI.52,Numérico,1,0 al 2
+lo_em_o3,"<Opción 2> 
+Indica la longitud del emisor en metros",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+noreu_o4,"<Opción 3>
+Indica el destino del agua tratada no reutilizada de forma general",SECC VI.52,Numérico,1,0 al 8
+g_nreo4,"<Opción 3>
+Indica el gasto en litros por segundo para el agua tratada no reutilizada",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+nresp_o4,"<Opción 3>
+Indica especificar otro destino del agua tratada no reutilizada",SECC VI.52,Carácter,5000,
+e_sub_o4,"<Opción 3> 
+Indica si se utiliza un emisor submarino",SECC VI.52,Numérico,1,0 al 2
+lo_em_o4,"<Opción 3> 
+Indica la longitud del emisor en metros",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+cant_lod,"Indica la cantidad de lodos residuales purgados en el sitio o planta durante el año 2020, señalando la unidad de medida utilizada. (Cantidad)",SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+unidmedi,"Indica la unidad de medida utilizada para el registro de lodos residuales purgados en el sitio o planta durante el año 2020, señalando la unidad de medida utilizada",SECC VI.52,Numérico,1,0 al 6
+tra_lesp,Indica especificar otro tipo de unidad de medida para el registro de lodos residuales purgados en el sitio o planta durante el año 2020,SECC VI.52,Carácter,5000,
+tra_ndes,Indica si no se llevaron lodos a destino,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_lres,Indica si se aplicó tratamiento a los lodos residuales a destino,SECC VI.52,Numérico,1,0 al 2
+mezc_lod,Indica el mezclado de lodos como proceso de tratamiento de los lodos durante el año 2020,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+espsamnt,Indica el espesamiento como proceso de tratamiento de los lodos durante el año 2020,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+deshidra,Indica la deshidratación como proceso de tratamiento de los lodos durante el año 2020,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+coge_ene,Indica la cogeneración de energía eléctrica como proceso de tratamiento de los lodos durante el año 2020,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+coge_kwh,Indica los kwh de energía eléctrica reportados durante el año 2020,SECC VI.52,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+anlz_dbo,Indica si se realizó o no análisis DBO,SECC VI.52,Numérico,1,0 al 2
+anlz_dqo,Indica si se aplicó o no análisis DQO,SECC VI.52,Numérico,1,0 al 2
+pre_poli,Indica si se estableció el sistema de preparación de polímero,SECC VI.52,Numérico,1,0 al 2
+tra_trre,Indica monorrelleno como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_tplt,Indica se depositaron en un área de la planta (diferente a monorrelleno) como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_tjrd,Indica parques y jardines  como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_tagr,Indica uso agrícola como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_tfor,Indica uso forestal como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_tsdf,Indica sitio de disposición final como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_tdre,Indica drenaje como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_totr,Indica otro destino como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_toes,Indica especificar otro destino como uno de los destinos para los lodos residuales tratados,SECC VI.52,Carácter,5000,
+tra_nrre,Indica monorrelleno como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_nplt,Indica se depositaron en un área de la planta (diferente a monorrelleno) como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_njrd,Indica parques y jardines  como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_nagr,Indica uso agrícola como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_nfor,Indica uso forestal como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_nsdf,Indica sitio de disposición final como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_ndre,Indica drenaje como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_nopl,Indica se envían a otra planta para su tratamiento como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_notr,Indica otro destino como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,3,"1, NA, NSS, ND, NULL"
+tra_noes,Indica especificar otro destino como uno de los destinos para los lodos residuales no tratados,SECC VI.52,Carácter,5000,

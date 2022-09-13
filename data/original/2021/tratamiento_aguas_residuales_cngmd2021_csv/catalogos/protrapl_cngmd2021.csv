@@ -1,0 +1,35 @@
+﻿protrapl,descrip
+0,No aplica/Sin respuesta
+1,Pretratamiento
+2,Sedimentación primaria
+3,Filtración
+4,Sedimentación secundaria
+5,Flotación
+6,Oxidación química
+7,Filtración con membranas
+8,Coagulación
+9,Floculación
+10,Precipitación (química)
+11,Intercambio iónico
+12,Lodos activados (todas las variantes)
+13,Laguna aireada
+14,Filtro percolador
+15,Discos biológicos rotatorios
+16,Filtro sumergido aerobio
+17,Reactor Biológico de Membranas (MBR)
+18,Fosa séptica
+19,Tanque Imhoff
+20,Laguna anaerobia
+21,Filtro anaerobio
+22,Reactor anaerobio de lecho de lodos con flujo ascendente (RAFA o UASB)
+23,Humedal
+24,Primario avanzado
+25,Laguna facultativa
+26,Laguna de maduración
+27,Remoción de nitrógeno
+28,Remoción de fósforo
+29,Desinfección con Cloro
+30,Desinfección con luz UV
+31,Desinfección con Ozono
+32,Terciario
+33,Otro

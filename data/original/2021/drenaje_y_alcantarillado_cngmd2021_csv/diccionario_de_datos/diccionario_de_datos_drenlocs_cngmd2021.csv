@@ -1,0 +1,4 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_dren,Indica el id,,Numérico,5,1 al 99999
+admn_id,Indica el id,,Numérico,5,1 al 99999
+localid,Indica la clave de la localidad ,SECC V.46,Numérico,6,1 al 999999

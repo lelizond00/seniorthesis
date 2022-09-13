@@ -1,0 +1,87 @@
+------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofilelogs/logs/2021_Data_Complete.log
+  log type:  text
+ opened on:   7 Sep 2022, 11:47:49
+
+. 
+. clear all
+
+. 
+. 
+. * 2021 * Note, 2021 files contain data obtained during 2020!
+
+. 
+. 
+. 
+. * Convert DBF to DTA files *
+
+. 
+. * administracion_cngmd2021_csv *
+
+. insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd2021.csv", comma clear
+(73 vars, 2,469 obs)
+
+. save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd2021.dta", replace
+file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd2021.csv", comma clear
+(10 vars, 3,982 obs)
+
+. save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd2021.dta", replace
+file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd2021.csv", comma clear
+(12 vars, 12,017 obs)
+
+. save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd2021.dta", replace
+file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd2021.csv", comma clear
+(6 vars, 29,534 obs)
+
+. save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd2021.dta", replace
+file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.csv", comma clear
+(9 vars, 2,271 obs)
+
+. save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.dta", replace
+file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.dta saved
+
+. 
+. * aguas_residuales_sin_tratamiento_cngmd2021_csv *
+
+. insheet using "data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/aguaresd_cngmd2021.csv", comma clear
+(6 vars, 5,852 obs)
+
+. save "data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/aguaresd_cngmd2021.dta", replace
+file data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/aguaresd_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/agurestr_cngmd2021.csv", comma clear
+(3 vars, 2,469 obs)
+
+. save "data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/agurestr_cngmd2021.dta", replace
+file data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/agurestr_cngmd2021.dta saved
+
+. 
+. * capta_agua_otros_recursos_hidricos_cngmd2021_csv *
+
+. insheet using "data/original/2021/capta_agua_otros_recursos_hidricos_cngmd2021_csv/conjunto_de_datos/otrehidr_cngmd2021.csv", comma clear
+(10 vars, 2,469 obs)
+
+. save "data/original/2021/capta_agua_otros_recursos_hidricos_cngmd2021_csv/conjunto_de_datos/otrehidr_cngmd2021.dta", replace
+file data/original/2021/capta_agua_otros_recursos_hidricos_cngmd2021_csv/conjunto_de_datos/otrehidr_cngmd2021.dta saved
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofilelogs/logs/2021_Data_Complete.log
+  log type:  text
+ closed on:   7 Sep 2022, 11:47:51
+------------------------------------------------------------------------------------------------------------------------------------------------

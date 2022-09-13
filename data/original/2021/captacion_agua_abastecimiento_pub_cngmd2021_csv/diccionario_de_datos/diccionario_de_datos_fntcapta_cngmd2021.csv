@@ -1,0 +1,24 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_fuente,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+cve_geo,Indica la clave geográfica,,Carácter,10,
+fnt_nom,Indica el nombre de la obra de toma para captación,SECC II. A,Carácter,5000,
+fuentcap,Indica el tipo de fuente donde se ubicó la obra de toma,SECC II. A,Numérico,1,0 al 9
+fnt_ppro,Indica la profundidad de la perforación del pozo,SECC II. A,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+fnt_oesp,Indica especificar el otro tipo de fuente para obra de toma,SECC II. A,Carácter,5000,
+fntmacro,Indica si se disponía o no de macromedidor,SECC II. A,Numérico,1,0 al 3
+capa_ins,Indica la capacidad instalada en litros por segundo,SECC II. A,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+gast_pro,Indica el gasto promedio de la obra de toma en litros por segundo,SECC II. A,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+fnt_kwh,Indica el consumo de energía eléctrica utilizado para la extracción del agua,SECC II. A,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+fnt_peso,Indica el consumo de energía eléctrica utilizado para la extracción del agua en unidades físicas,SECC II. A,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+no_utili,Indica que no utiliza energía eléctrica para la extracción del agua,SECC II. A,Carácter,3,"1, NA, NSS, ND, NULL"
+dndextrc,Indica el lugar al que se condujo el agua después de su extracción,SECC II. A,Numérico,1,0 al 5
+fnt_espe,Indica especificar el otro lugar donde se condujo directamente el agua después de su extracción,SECC II. A,Carácter,5000,
+clor_cap,"Indica si se aplicó la desinfección o cloración, al agua captada en el año establecido",SECC II. A,Numérico,1,0 al 2
+clor_gas,Indica el tipo de desinfección o cloración: cloro gas,SECC II. A,Carácter,3,"1, NA, NSS, ND, NULL"
+clor_sod,Indica el tipo de desinfección o cloración: hipoclorito de sodio o calcio,SECC II. A,Carácter,3,"1, NA, NSS, ND, NULL"
+clor_dio,Indica el tipo de desinfección o cloración: dióxido de cloro,SECC II. A,Carácter,3,"1, NA, NSS, ND, NULL"
+clor_ozo,Indica el tipo de desinfección o cloración: ozono,SECC II. A,Carácter,3,"1, NA, NSS, ND, NULL"
+clor_ult,Indica el tipo de desinfección o cloración: luz ultravioleta,SECC II. A,Carácter,3,"1, NA, NSS, ND, NULL"
+clor_otr,Indica el tipo de desinfección o cloración: otro,SECC II. A,Carácter,3,"1, NA, NSS, ND, NULL"
+ti_clo_e,Indica especificar otro tipo de desinfección o cloración,SECC II. A,Carácter,5000,

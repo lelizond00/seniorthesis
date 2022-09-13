@@ -1,0 +1,6 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+ag_servi,Indica si se prestaba el servicio de agua de la red pública al cierre del año 2020,SECC I. 1,Numérico,1,0 al 2
+pobl_prc,Indica el porcentaje de población municipal o demarcación territorial que contaba con acceso al servicio de agua de la red pública,SECC I. 1.1,Carácter,20,"0-100, NA, NSS, ND, NULL"
+no_sabe,Indica si no sabe el porcentaje de población municipal o demarcación territorial que contaba con acceso al servicio de agua de la red pública,SECC I. 1.1,Carácter,3,"1, NA, NSS, ND, NULL"
+tot_pres,Indica el número total de prestadores del servicio de agua en el municipio o demarcación territorial,SECC I. 2,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"

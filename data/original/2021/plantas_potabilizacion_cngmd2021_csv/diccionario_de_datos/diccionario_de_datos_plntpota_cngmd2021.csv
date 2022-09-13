@@ -1,0 +1,64 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+id_pln,Indica el id,,Numérico,5,1 al 99999
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+cve_geo,Indica la clave geográfica,,Carácter,10,
+pln_nom,Indica el nombre de la planta de potabilización,SECC III.11.3,Carácter,5000,
+plpotope,Indica si la planta de potabilización operó durante todo el año 2020 incluyendo el cierre del mismo,SECC III.11.3,Numérico,1,0 al 2
+rznnoppt,Indica señalar la razón principal por la que no operó la planta,SECC III.11.3,Numérico,2,0 al 13
+raz_espe,Indica especificar otra razón principal por la que no operó la planta,SECC III.11.3,Carácter,5000,
+agcruftp,Indica los tipos de fuentes que suministraron agua cruda a la planta potabilizadora,SECC III.11.3,Numérico,1,0 al 5
+cru_esp,Indica especificar el otro tipo de fuente que suministraba agua cruda a la planta,SECC III.11.3,Carácter,5000,
+cap_inst,Indica la capacidad de potabilización instalada en litros por segundo ,SECC III.11.3,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+gasto_pr,Indica el gasto promedio diario potabilizado en litros por segundo,SECC III.11.3,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+datoprom,Indica la obtención del gasto promedio potabilizado,SECC III.11.3,Numérico,1,0 al 2
+pln_tanq,"Indica el reporte de la infraestructura disponible en la planta, dado el caso si es: tanques o piletas",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_alma,"Indica el reporte de la infraestructura disponible en la planta, dado el caso si es: almacén de reactivos",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_labo,"Indica el reporte de la infraestructura disponible en la planta, dado el caso si es: laboratorio",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_ctrl,"Indica el reporte de la infraestructura disponible en la planta, dado el caso si es: cuarto de control",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_sube,"Indica el reporte de la infraestructura disponible en la planta, dado el caso si es: subestación de energía eléctrica",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_clor,"Indica el reporte de la infraestructura disponible en la planta, dado el caso si es: caseta de cloración",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_otra,"Indica el reporte de la infraestructura disponible en la planta, dado el caso si es: otra",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_espe,Indica especificar el nuevo tipo de infraestructura de la planta ,SECC III.11.3,Carácter,5000,
+pln_kwh,Indica el consumo de energía eléctrica utilizado para la potabilización en kwh,SECC III.11.3,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+pln_peso,Indica el consumo de energía eléctrica utilizado para la potabilización en pesos,SECC III.11.3,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+no_con_e,Indica que no se sabe el consumo de energía eléctrica utilizado en la planta de potabilización,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+cost_ope,Indica los costos de operación y mantenimiento asociados a la planta de potabilización durante el año 2020,SECC III.11.3,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+flt_dire,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+1. filtración directa",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+flt_lent,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+2. filtración lenta",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+clar_con,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+3. clarificación convencional",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+coag_qui,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+4. coagulación química",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_oxid,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+5. oxidación",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_abla,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+6 ablandamiento",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_adso,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+7. adsorción",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_desi,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+8. desinfección",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_floc,"Indica si uno de los procesos de potabilización aplicado a la planta fue: 
+9. floculación",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_ioni,Indica si uno de los procesos de potabilización aplicado a la planta fue: 10. intercambio iónico,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_osmo,Indica si uno de los procesos de potabilización aplicado a la planta fue: 11. ósmosis inversa,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_desa,Indica si uno de los procesos de potabilización aplicado a la planta fue: 12. desalinización,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_neut,Indica si uno de los procesos de potabilización aplicado a la planta fue: 13. neutralización ,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_prec,Indica si uno de los procesos de potabilización aplicado a la planta fue: 14. precipitación,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_otro,"Indica si se optó por otro proceso de potabilización aplicado a la planta: 
+15. otro",SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+pln_o_es,Indica especificar otro proceso de potabilización aplicado a la planta:  ,SECC III.11.3,Carácter,5000,
+lodo_env,Indica si los lodos residuales generados en la planta se enviaron a destino,SECC III.11.3,Numérico,1,0 al 2
+vol_lodo,Indica el volumen de lodos residuales a destino,SECC III.11.3,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
+unidmedi,Indica la unidad de medida del volumen de lodos residuales registrados,SECC III.11.3,Numérico,1,0 al 6
+ot_espec,Indica especificar otra unidad de medida de lodos residuales registrada,SECC III.11.3,Carácter,5000,
+trat_lod,Indica si se aplicó tratamiento a lodos residuales a destino,SECC III.11.3,Numérico,1,0 al 2
+lech_sec,Indica lecho de secado como tipo de tratamiento aplicado a lodos residuales a destino,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+fil_band,Indica filtros banda como tipo de tratamiento aplicado a lodos residuales a destino,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+otro_tra,Indica otro tipo de tratamiento aplicado a lodos residuales a destino,SECC III.11.3,Carácter,3,"1, NA, NSS, ND, NULL"
+otro_esp,Indica especificar otro tipo de tratamiento aplicado a lodos residuales a destino,SECC III.11.3,Carácter,5000,
+deslotra,Indica el destino de los lodos residuales tratados,SECC III.11.3,Numérico,1,0 al 6
+lo_tr_es,Indica especificar otro destino para los lodos residuales tratados,SECC III.11.3,Carácter,5000,
+deslontr,Indica el destino de los lodos residuales no tratados,SECC III.11.3,Numérico,1,0 al 6
+no_tr_es,Indica especificar otro destino para los lodos residuales no tratados,SECC III.11.3,Carácter,5000,

@@ -1,0 +1,3 @@
+﻿COLUMNA,DESCRIPCIÓN,ORIGEN,TIPO_DATO,LONGITUD,CÓDIGO_VALIDO
+folio,Indica el identificador de cada cuestionario compuesto por la clave de entidad y por la clave de municipio o delegación,,Numérico,5,1001 al 32058
+num_capt,Indica la cantidad de obras de toma para captación de agua que fueron utilizadas durante el año 2020,SECC II.A. 3,Carácter,20,"0-999999999999999, NA, NSS, ND, NULL"
