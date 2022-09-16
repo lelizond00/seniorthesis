@@ -2,23 +2,20 @@
       name:  <unnamed>
        log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofilelogs/logs/2021_Data_Complete.log
   log type:  text
- opened on:   7 Sep 2022, 11:47:49
+ opened on:  16 Sep 2022, 17:33:42
 
 . 
 . clear all
 
 . 
 . 
-. * 2021 * Note, 2021 files contain data obtained during 2020!
-
+.                                         * 2021 * Note, 2021 files contain data obtained during 2020!
+.                                         
+.                                         
+.                                 
+.                                         * Convert DBF to DTA files and Reshape *
 . 
-. 
-. 
-. * Convert DBF to DTA files *
-
-. 
-. * administracion_cngmd2021_csv *
-
+.         * administracion_cngmd2021_csv *
 . insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd2021.csv", comma clear
 (73 vars, 2,469 obs)
 
@@ -29,12 +26,56 @@ file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_
 . insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd2021.csv", comma clear
 (10 vars, 3,982 obs)
 
+. drop id_cuota
+
+. reshape wide num_toma tomas_cm reci_exp mont_fac mont_rec v_m3_sum frecfact, i(folio) j(tipotoma) 
+(note: j = 1 2 3 4 5)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                     3982   ->    1749
+Number of variables                   9   ->      36
+j variable (5 values)          tipotoma   ->   (dropped)
+xij variables:
+                               num_toma   ->   num_toma1 num_toma2 ... num_toma5
+                               tomas_cm   ->   tomas_cm1 tomas_cm2 ... tomas_cm5
+                               reci_exp   ->   reci_exp1 reci_exp2 ... reci_exp5
+                               mont_fac   ->   mont_fac1 mont_fac2 ... mont_fac5
+                               mont_rec   ->   mont_rec1 mont_rec2 ... mont_rec5
+                               v_m3_sum   ->   v_m3_sum1 v_m3_sum2 ... v_m3_sum5
+                               frecfact   ->   frecfact1 frecfact2 ... frecfact5
+-----------------------------------------------------------------------------
+
 . save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd2021.dta", replace
 file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd2021.dta saved
 
 . 
 . insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd2021.csv", comma clear
 (12 vars, 12,017 obs)
+
+. collapse (max) mult_rec req_pago conv_pag redu_sum susp_srv embargos otra_med o_med_es no_medid, by (folio tipotom3)
+
+. reshape wide mult_rec req_pago conv_pag redu_sum susp_srv embargos otra_med o_med_es no_medid, i(folio) j(tipotom3) 
+(note: j = 0 1 2 3 4 5)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                    10824   ->    2464
+Number of variables                  11   ->      55
+j variable (6 values)          tipotom3   ->   (dropped)
+xij variables:
+                               mult_rec   ->   mult_rec0 mult_rec1 ... mult_rec5
+                               req_pago   ->   req_pago0 req_pago1 ... req_pago5
+                               conv_pag   ->   conv_pag0 conv_pag1 ... conv_pag5
+                               redu_sum   ->   redu_sum0 redu_sum1 ... redu_sum5
+                               susp_srv   ->   susp_srv0 susp_srv1 ... susp_srv5
+                               embargos   ->   embargos0 embargos1 ... embargos5
+                               otra_med   ->   otra_med0 otra_med1 ... otra_med5
+                               o_med_es   ->   o_med_es0 o_med_es1 ... o_med_es5
+                               no_medid   ->   no_medid0 no_medid1 ... no_medid5
+-----------------------------------------------------------------------------
+
+. drop mult_rec0 req_pago0 conv_pag0 redu_sum0 susp_srv0 embargos0 otra_med0 o_med_es0 no_medid0 
 
 . save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd2021.dta", replace
 file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd2021.dta saved
@@ -43,6 +84,27 @@ file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_
 . insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd2021.csv", comma clear
 (6 vars, 29,534 obs)
 
+. drop id_recibo
+
+. drop if recibcon == 0
+(38 observations deleted)
+
+. collapse (max) no_aplic no_inclu si_inclu, by (folio recibcon)
+
+. reshape wide si_inclu no_inclu no_aplic, i(folio) j(recibcon) 
+(note: j = 1 2 3 4 5 6 7 8 9 10 11 12)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                    29490   ->    2463
+Number of variables                   5   ->      37
+j variable (12 values)         recibcon   ->   (dropped)
+xij variables:
+                               si_inclu   ->   si_inclu1 si_inclu2 ... si_inclu12
+                               no_inclu   ->   no_inclu1 no_inclu2 ... no_inclu12
+                               no_aplic   ->   no_aplic1 no_aplic2 ... no_aplic12
+-----------------------------------------------------------------------------
+
 . save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd2021.dta", replace
 file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd2021.dta saved
 
@@ -50,12 +112,32 @@ file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_
 . insheet using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.csv", comma clear
 (9 vars, 2,271 obs)
 
+. drop id_serv
+
+. reshape wide num_tom recib_ex mon_fact mon_reca v_sum_m3 frecfac2, i(folio) j(tipotom2) 
+(note: j = 1 2 3 4 5)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                     2271   ->     672
+Number of variables                   8   ->      31
+j variable (5 values)          tipotom2   ->   (dropped)
+xij variables:
+                                num_tom   ->   num_tom1 num_tom2 ... num_tom5
+                               recib_ex   ->   recib_ex1 recib_ex2 ... recib_ex5
+                               mon_fact   ->   mon_fact1 mon_fact2 ... mon_fact5
+                               mon_reca   ->   mon_reca1 mon_reca2 ... mon_reca5
+                               v_sum_m3   ->   v_sum_m31 v_sum_m32 ... v_sum_m35
+                               frecfac2   ->   frecfac21 frecfac22 ... frecfac25
+-----------------------------------------------------------------------------
+
 . save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.dta", replace
 file data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.dta saved
 
 . 
-. * aguas_residuales_sin_tratamiento_cngmd2021_csv *
-
+.         * aguas_residuales_sin_tratamiento_cngmd2021_csv *
+.                                                                                                                                               
+>                   
 . insheet using "data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/aguaresd_cngmd2021.csv", comma clear
 (6 vars, 5,852 obs)
 
@@ -70,8 +152,7 @@ file data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_
 file data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/agurestr_cngmd2021.dta saved
 
 . 
-. * capta_agua_otros_recursos_hidricos_cngmd2021_csv *
-
+.         * capta_agua_otros_recursos_hidricos_cngmd2021_csv *
 . insheet using "data/original/2021/capta_agua_otros_recursos_hidricos_cngmd2021_csv/conjunto_de_datos/otrehidr_cngmd2021.csv", comma clear
 (10 vars, 2,469 obs)
 
@@ -79,9 +160,447 @@ file data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_
 file data/original/2021/capta_agua_otros_recursos_hidricos_cngmd2021_csv/conjunto_de_datos/otrehidr_cngmd2021.dta saved
 
 . 
+.         * captacion_agua_abastecimiento_pub_cngmd2021_csv *
+. insheet using "data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/captagua_cngmd2021.csv", comma clear
+(2 vars, 2,469 obs)
+
+. save "data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/captagua_cngmd2021.dta", replace
+file data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/captagua_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/fntcapta_cngmd2021.csv", comma clear
+(23 vars, 23,271 obs)
+
+. save "data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/fntcapta_cngmd2021.dta", replace
+file data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/fntcapta_cngmd2021.dta saved
+
+. 
+.         * difusion_informacion_servicio_agua_cngmd2021_csv *
+. insheet using "data/original/2021/difusion_informacion_servicio_agua_cngmd2021_csv/conjunto_de_datos/difusinf_cngmd2021.csv", comma clear
+(29 vars, 2,469 obs)
+
+. save "data/original/2021/difusion_informacion_servicio_agua_cngmd2021_csv/conjunto_de_datos/difusinf_cngmd2021.dta", replace
+file data/original/2021/difusion_informacion_servicio_agua_cngmd2021_csv/conjunto_de_datos/difusinf_cngmd2021.dta saved
+
+.         
+.         * drenaje_y_alcantarillado_cngmd2021_csv *
+. insheet using "data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/admndren_cngmd2021.csv", comma clear
+(11 vars, 2,086 obs)
+
+. save "data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/admndren_cngmd2021.dta", replace
+file data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/admndren_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/drenlocs_cngmd2021.csv", comma clear
+(3 vars, 3,584 obs)
+
+. save "data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/drenlocs_cngmd2021.dta", replace
+file data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/drenlocs_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/servdren_cngmd2021.csv", comma clear
+(35 vars, 2,469 obs)
+
+. save "data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/servdren_cngmd2021.dta", replace
+file data/original/2021/drenaje_y_alcantarillado_cngmd2021_csv/conjunto_de_datos/servdren_cngmd2021.dta saved
+
+. 
+. 
+.         * plantas_potabilizacion_cngmd2021_csv *
+. insheet using "data/original/2021/plantas_potabilizacion_cngmd2021_csv/conjunto_de_datos/aguapota_cngmd2021.csv", comma clear
+(14 vars, 2,469 obs)
+
+. save "data/original/2021/plantas_potabilizacion_cngmd2021_csv/conjunto_de_datos/aguapota_cngmd2021.dta", replace
+file data/original/2021/plantas_potabilizacion_cngmd2021_csv/conjunto_de_datos/aguapota_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/plantas_potabilizacion_cngmd2021_csv/conjunto_de_datos/plntpota_cngmd2021.csv", comma clear
+(53 vars, 652 obs)
+
+. save "data/original/2021/plantas_potabilizacion_cngmd2021_csv/conjunto_de_datos/plntpota_cngmd2021.dta", replace
+file data/original/2021/plantas_potabilizacion_cngmd2021_csv/conjunto_de_datos/plntpota_cngmd2021.dta saved
+
+.         
+.         * programas_servicio_agua_cngmd2021_csv * 
+. insheet using "data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/aguaprog_cngmd2021.csv", comma clear
+(23 vars, 434 obs)
+
+. save "data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/aguaprog_cngmd2021.dta", replace
+file data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/aguaprog_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/programs_cngmd2021.csv", comma clear
+(12 vars, 2,469 obs)
+
+. save "data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/programs_cngmd2021.dta", replace
+file data/original/2021/programas_servicio_agua_cngmd2021_csv/conjunto_de_datos/programs_cngmd2021.dta saved
+
+.         
+.         * servicio_agua_red_publica_cngmd2021_csv *
+. insheet using "data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/admnapsa_cngmd2021.csv", comma clear
+(86 vars, 4,169 obs)
+
+. save "data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/admnapsa_cngmd2021.dta", replace
+file data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/admnapsa_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/admnlocs_cngmd2021.csv", comma clear
+(5 vars, 8,548 obs)
+
+. save "data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/admnlocs_cngmd2021.dta", replace
+file data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/admnlocs_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/servagua_cngmd2021.csv", comma clear
+(5 vars, 2,469 obs)
+
+. save "data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/servagua_cngmd2021.dta", replace
+file data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/servagua_cngmd2021.dta saved
+
+. 
+.         * tratamiento_aguas_residuales_cngmd2021_csv *
+. insheet using "data/original/2021/tratamiento_aguas_residuales_cngmd2021_csv/conjunto_de_datos/plnttrat_cngmd2021.csv", comma clear
+(105 vars, 3,433 obs)
+
+. save "data/original/2021/tratamiento_aguas_residuales_cngmd2021_csv/conjunto_de_datos/plnttrat_cngmd2021.dta", replace
+file data/original/2021/tratamiento_aguas_residuales_cngmd2021_csv/conjunto_de_datos/plnttrat_cngmd2021.dta saved
+
+. 
+. insheet using "data/original/2021/tratamiento_aguas_residuales_cngmd2021_csv/conjunto_de_datos/tramnres_cngmd2021.csv", comma clear
+(19 vars, 2,469 obs)
+
+. save "data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/tramnres_cngmd2021.dta", replace
+file data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_datos/tramnres_cngmd2021.dta saved
+
+. clear
+
+. 
+.                                         
+.                                         * Mergers *                                     
+. clear
+
+.         
+. use "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd2021.dta"
+
+. merge 1:1 folio using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd2021.dta", nogenerate
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                           720
+        from master                       720  
+        from using                          0  
+
+    matched                             1,749  
+    -----------------------------------------
+
+. merge 1:1 folio using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd2021.dta", nogenerate
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             5
+        from master                         5  
+        from using                          0  
+
+    matched                             2,464  
+    -----------------------------------------
+
+. merge 1:1 folio using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd2021.dta", nogenerate
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             6
+        from master                         6  
+        from using                          0  
+
+    matched                             2,463  
+    -----------------------------------------
+
+. merge 1:1 folio using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.dta", nogenerate
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                         1,797
+        from master                     1,797  
+        from using                          0  
+
+    matched                               672  
+    -----------------------------------------
+
+. 
+. save "data/modified/2021/2021_Merged.dta", replace
+file data/modified/2021/2021_Merged.dta saved
+
+. 
+. 
+.                                         * Data Cleaning *
+. * ing_agua = ingreso por el suministro de agua potable y saneamiento durante el año 2020 (ingresos por el suministro de agua de la red publica
+> ) *
+. 
+. drop if ing_agua == "NSS"
+(84 observations deleted)
+
+. drop if ing_agua == "NA"
+(595 observations deleted)
+
+. destring ing_agua, replace
+ing_agua: all characters numeric; replaced as double
+(36 missing values generated)
+
+. 
+. 
+. * mont_fac mont_rec = monto facturado y recaudado bajo cuota fija *
+. 
+. forvalues i=1/5 {
+  2.         drop if mont_fac`i' == "NSS"
+  3.         drop if mont_rec`i' == "NSS"
+  4.         drop if mont_fac`i' == "NA"
+  5.         drop if mont_rec`i' == "NA"
+  6.         drop if mont_fac`i' == "ND"
+  7.         destring mont_fac`i' mont_rec`i', replace
+  8.         recode mont_fac`i' ("."=0)
+  9.         recode mont_rec`i' ("."=0)
+ 10.         rename mont_fac`i' monto_facturado_cuota_fija_`i'
+ 11.         rename mont_rec`i' monto_recaudado_cuota_fija_`i'
+ 12. }
+(87 observations deleted)
+(29 observations deleted)
+(44 observations deleted)
+(37 observations deleted)
+(2 observations deleted)
+mont_fac1: all characters numeric; replaced as double
+(240 missing values generated)
+mont_rec1: all characters numeric; replaced as double
+(208 missing values generated)
+(mont_fac1: 240 changes made)
+(mont_rec1: 208 changes made)
+(9 observations deleted)
+(0 observations deleted)
+(11 observations deleted)
+(2 observations deleted)
+(0 observations deleted)
+mont_fac2: all characters numeric; replaced as double
+(1254 missing values generated)
+mont_rec2: all characters numeric; replaced as double
+(1256 missing values generated)
+(mont_fac2: 1254 changes made)
+(mont_rec2: 1256 changes made)
+(6 observations deleted)
+(3 observations deleted)
+(3 observations deleted)
+(1 observation deleted)
+(0 observations deleted)
+mont_fac3: all characters numeric; replaced as double
+(923 missing values generated)
+mont_rec3: all characters numeric; replaced as double
+(921 missing values generated)
+(mont_fac3: 923 changes made)
+(mont_rec3: 921 changes made)
+(4 observations deleted)
+(1 observation deleted)
+(4 observations deleted)
+(1 observation deleted)
+(0 observations deleted)
+mont_fac4: all characters numeric; replaced as double
+(1263 missing values generated)
+mont_rec4: all characters numeric; replaced as double
+(1290 missing values generated)
+(mont_fac4: 1263 changes made)
+(mont_rec4: 1290 changes made)
+(3 observations deleted)
+(0 observations deleted)
+(4 observations deleted)
+(0 observations deleted)
+(0 observations deleted)
+mont_fac5: all characters numeric; replaced as double
+(1466 missing values generated)
+mont_rec5: all characters numeric; replaced as double
+(1469 missing values generated)
+(mont_fac5: 1466 changes made)
+(mont_rec5: 1469 changes made)
+
+. 
+. gene monto_recaud_cuota_fija_total = monto_recaudado_cuota_fija_1 + monto_recaudado_cuota_fija_2 + monto_recaudado_cuota_fija_3 + monto_recaud
+> ado_cuota_fija_4 +monto_recaudado_cuota_fija_5
+
+. 
+. gene monto_factur_cuota_fija_total = monto_facturado_cuota_fija_1 + monto_facturado_cuota_fija_2 + monto_facturado_cuota_fija_3 + monto_factur
+> ado_cuota_fija_4 +monto_facturado_cuota_fija_5
+
+. 
+. 
+. * mon_fact mon_reca = monto facturado y recaudado bajo cuota media * 
+. forvalues i=1/5 {
+  2.         drop if mon_fact`i' == "NSS"
+  3.         drop if mon_reca`i' == "NSS"
+  4.         drop if mon_fact`i' == "NA"
+  5.         drop if mon_reca`i' == "NA"
+  6.         drop if mon_fact`i' == "ND"
+  7.         destring mon_fact`i' mon_reca`i', replace
+  8.         recode mon_fact`i' ("."=0)
+  9.         recode mon_reca`i' ("."=0)
+ 10.         rename mon_fact`i' monto_facturado_cuota_media_`i'
+ 11.         rename mon_reca`i' monto_recaudado_cuota_media_`i'
+ 12. }
+(13 observations deleted)
+(1 observation deleted)
+(8 observations deleted)
+(6 observations deleted)
+(1 observation deleted)
+mon_fact1: all characters numeric; replaced as double
+(1056 missing values generated)
+mon_reca1: all characters numeric; replaced as double
+(1062 missing values generated)
+(mon_fact1: 1056 changes made)
+(mon_reca1: 1062 changes made)
+(4 observations deleted)
+(0 observations deleted)
+(0 observations deleted)
+(1 observation deleted)
+(0 observations deleted)
+mon_fact2: all characters numeric; replaced as double
+(1170 missing values generated)
+mon_reca2: all characters numeric; replaced as double
+(1176 missing values generated)
+(mon_fact2: 1170 changes made)
+(mon_reca2: 1176 changes made)
+(1 observation deleted)
+(0 observations deleted)
+(0 observations deleted)
+(1 observation deleted)
+(0 observations deleted)
+mon_fact3: all characters numeric; replaced as double
+(1065 missing values generated)
+mon_reca3: all characters numeric; replaced as double
+(1072 missing values generated)
+(mon_fact3: 1065 changes made)
+(mon_reca3: 1072 changes made)
+(0 observations deleted)
+(0 observations deleted)
+(2 observations deleted)
+(2 observations deleted)
+(0 observations deleted)
+mon_fact4: all characters numeric; replaced as double
+(1219 missing values generated)
+mon_reca4: all characters numeric; replaced as double
+(1234 missing values generated)
+(mon_fact4: 1219 changes made)
+(mon_reca4: 1234 changes made)
+(0 observations deleted)
+(0 observations deleted)
+(0 observations deleted)
+(0 observations deleted)
+(0 observations deleted)
+mon_fact5: all characters numeric; replaced as double
+(1418 missing values generated)
+mon_reca5: all characters numeric; replaced as double
+(1419 missing values generated)
+(mon_fact5: 1418 changes made)
+(mon_reca5: 1419 changes made)
+
+. 
+. gene monto_recaud_cuota_media_total = monto_recaudado_cuota_media_1 + monto_recaudado_cuota_media_2 + monto_recaudado_cuota_media_3 + monto_re
+> caudado_cuota_media_4 +monto_recaudado_cuota_media_5
+
+. 
+. gene monto_factur_cuota_media_total = monto_facturado_cuota_media_1 + monto_facturado_cuota_media_2 + monto_facturado_cuota_media_3 + monto_fa
+> cturado_cuota_media_4 +monto_facturado_cuota_media_5
+
+. 
+. * Aggregates *
+. gene rat_recaud_factura_cuotafija = monto_recaud_cuota_fija_total/monto_factur_cuota_fija_total
+(203 missing values generated)
+
+. gene rat_recaud_factura_cuotamedia = monto_recaud_cuota_media_total/monto_factur_cuota_media_total
+(1,016 missing values generated)
+
+. gene total_recaud_cuota_myf = monto_recaud_cuota_media_total + monto_recaud_cuota_fija_total
+
+. gene total_factur_cuota_myf = monto_factur_cuota_media_total + monto_factur_cuota_fija_total
+
+. 
+. 
+. * Multas * 
+. 
+. forvalues i=1/5 {
+  2.         recode mult_rec`i' ("."=0)
+  3. }
+(mult_rec1: 953 changes made)
+(mult_rec2: 1178 changes made)
+(mult_rec3: 1069 changes made)
+(mult_rec4: 1235 changes made)
+(mult_rec5: 1422 changes made)
+
+. forvalues i=1/5 {
+  2.         recode req_pago`i' ("."=0)
+  3. }
+(req_pago1: 929 changes made)
+(req_pago2: 1173 changes made)
+(req_pago3: 1062 changes made)
+(req_pago4: 1246 changes made)
+(req_pago5: 1420 changes made)
+
+. forvalues i=1/5 {
+  2.         recode conv_pag`i' ("."=0)
+  3. }
+(conv_pag1: 953 changes made)
+(conv_pag2: 1199 changes made)
+(conv_pag3: 1089 changes made)
+(conv_pag4: 1275 changes made)
+(conv_pag5: 1425 changes made)
+
+. forvalues i=1/5 {
+  2.         recode redu_sum`i' ("."=0)
+  3. }
+(redu_sum1: 1328 changes made)
+(redu_sum2: 1433 changes made)
+(redu_sum3: 1409 changes made)
+(redu_sum4: 1460 changes made)
+(redu_sum5: 1479 changes made)
+
+. forvalues i=1/5 {
+  2.         recode mult_rec`i' ("."=0)
+  3. }
+(mult_rec1: 0 changes made)
+(mult_rec2: 0 changes made)
+(mult_rec3: 0 changes made)
+(mult_rec4: 0 changes made)
+(mult_rec5: 0 changes made)
+
+. forvalues i=1/5 {
+  2.         recode susp_srv`i' ("."=0)
+  3. }
+(susp_srv1: 1159 changes made)
+(susp_srv2: 1234 changes made)
+(susp_srv3: 1168 changes made)
+(susp_srv4: 1312 changes made)
+(susp_srv5: 1441 changes made)
+
+. forvalues i=1/5 {
+  2.         recode embargos`i' ("."=0)
+  3. }
+(embargos1: 1492 changes made)
+(embargos2: 1495 changes made)
+(embargos3: 1495 changes made)
+(embargos4: 1497 changes made)
+(embargos5: 1497 changes made)
+
+. forvalues i=1/5 {
+  2.         recode no_medid`i' ("."=0)
+  3. }
+(no_medid1: 1107 changes made)
+(no_medid2: 729 changes made)
+(no_medid3: 886 changes made)
+(no_medid4: 603 changes made)
+(no_medid5: 203 changes made)
+
+. 
+. save "data/modified/2021/2021_Merged.dta", replace
+file data/modified/2021/2021_Merged.dta saved
+
+. 
 . log close
       name:  <unnamed>
        log:  /Users/luiselizondogracia/Documents/GitHub/seniorthesis/dofilelogs/logs/2021_Data_Complete.log
   log type:  text
- closed on:   7 Sep 2022, 11:47:51
+ closed on:  16 Sep 2022, 17:33:44
 ------------------------------------------------------------------------------------------------------------------------------------------------

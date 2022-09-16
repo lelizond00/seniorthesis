@@ -42,7 +42,7 @@ reshape wide num_tom recib_ex mon_fact mon_reca v_sum_m3 frecfac2, i(folio) j(ti
 save "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.dta", replace
 
 	* aguas_residuales_sin_tratamiento_cngmd2021_csv *
-																				* will not be used! *
+																				
 insheet using "data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/aguaresd_cngmd2021.csv", comma clear
 save "data/original/2021/aguas_residuales_sin_tratamiento_cngmd2021_csv/conjunto_de_datos/aguaresd_cngmd2021.dta", replace
 
@@ -58,8 +58,6 @@ insheet using "data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_cs
 save "data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/captagua_cngmd2021.dta", replace
 
 insheet using "data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/fntcapta_cngmd2021.csv", comma clear
-collapse (mean) no_aplic no_inclu si_inclu, by (folio) 
-* Aqui me quede *
 save "data/original/2021/captacion_agua_abastecimiento_pub_cngmd2021_csv/conjunto_de_datos/fntcapta_cngmd2021.dta", replace
 
 	* difusion_informacion_servicio_agua_cngmd2021_csv *
@@ -110,35 +108,126 @@ save "data/original/2021/servicio_agua_red_publica_cngmd2021_csv/conjunto_de_dat
 clear
 
 					
-					
-			
-					
-					
-					
-					
-					
-					
+					* Mergers *					
 clear
 	
 use "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/admncion_cngmd2021.dta"
 merge 1:1 folio using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/cuotafij_cngmd2021.dta", nogenerate
 merge 1:1 folio using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/mediadop_cngmd2021.dta", nogenerate
+merge 1:1 folio using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/reciboag_cngmd2021.dta", nogenerate
+merge 1:1 folio using "data/original/2021/administracion_cngmd2021_csv/conjunto_de_datos/servmedi_cngmd2021.dta", nogenerate
 
-merge 1:1 folio using , gen(aaa002)
+save "data/modified/2021/2021_Merged.dta", replace
 
 log close
 
 
+					* Data Cleaning *
+* ing_agua = ingreso por el suministro de agua potable y saneamiento durante el año 2020 (ingresos por el suministro de agua de la red publica) *
+
+drop if ing_agua == "NSS"
+drop if ing_agua == "NA"
+destring ing_agua, replace
 
 
+* mont_fac mont_rec = monto facturado y recaudado bajo cuota fija *
+drop if mont_fac1 == "NSS"
+drop if mont_fac2 == "NSS"
+drop if mont_fac3 == "NSS"
+drop if mont_fac4 == "NSS"
+drop if mont_fac5 == "NSS"
+drop if mont_rec1 == "NSS"
+drop if mont_rec2 == "NSS"
+drop if mont_rec3 == "NSS"
+drop if mont_rec4 == "NSS"
+drop if mont_rec5 == "NSS"
+
+drop if mont_fac1 == "NA"
+drop if mont_fac2 == "NA"
+drop if mont_fac3 == "NA"
+drop if mont_fac4 == "NA"
+drop if mont_fac5 == "NA"
+drop if mont_rec1 == "NA"
+drop if mont_rec2 == "NA"
+drop if mont_rec3 == "NA"
+drop if mont_rec4 == "NA"
+drop if mont_rec5 == "NA"
+
+drop if mont_fac1 == "ND"
+drop if mont_fac2 == "ND"
+drop if mont_fac3 == "ND"
+drop if mont_fac4 == "ND"
+drop if mont_fac5 == "ND"
+
+recode mont_fac1 (""=0)
+recode mont_fac2 ("."=0)
+recode mont_fac3 ("."=0)
+recode mont_fac4 ("."=0)
+recode mont_fac5 ("."=0)
+recode mont_rec1 ("."=0)
+recode mont_rec2 ("."=0)
+recode mont_rec3 ("."=0)
+recode mont_rec4 ("."=0)
+recode mont_rec5 ("."=0)
+
+destring mont_fac1 mont_fac2 mont_fac3 mont_fac4 mont_fac5 mont_rec1  mont_rec2  mont_rec3  mont_rec4  mont_rec5, replace
+
+gene monto_factura_cuota_fija = mont_fac1 + mont_fac2 + mont_fac3 + mont_fac4 + mont_fac5
+gene monto_recaudacion_cuota_fija = mont_rec1 + mont_rec2 + mont_rec3 + mont_rec4 + mont_rec5
+
+gene rat_recaudacion_factura_c_fija = monto_recaudacion_cuota_fija/monto_factura_cuota_fija
 
 
+* mon_fact mon_reca = monto facturado y recaudado bajo cuota media * 
+drop if mon_fact1 == "NSS"
+drop if mon_fact2 == "NSS"
+drop if mon_fact3 == "NSS"
+drop if mon_fact4 == "NSS"
+drop if mon_fact5 == "NSS"
+drop if mon_reca1 == "NSS"
+drop if mon_reca2 == "NSS"
+drop if mon_reca3 == "NSS"
+drop if mon_reca4 == "NSS"
+drop if mon_reca5 == "NSS"
+
+drop if mon_fact1 == "NA"
+drop if mon_fact2 == "NA"
+drop if mon_fact3 == "NA"
+drop if mon_fact4 == "NA"
+drop if mon_fact5 == "NA"
+drop if mon_reca1 == "NA"
+drop if mon_reca2 == "NA"
+drop if mon_reca3 == "NA"
+drop if mon_reca4 == "NA"
+drop if mon_reca5 == "NA"
+
+drop if mon_fact1 == "ND"
+drop if mon_fact2 == "ND"
+drop if mon_fact3 == "ND"
+drop if mon_fact4 == "ND"
+drop if mon_fact5 == "ND"
+
+recode mon_fact1 ("."=0)
+recode mon_fact2 ("."=0)
+recode mon_fact3 ("."=0)
+recode mon_fact4 ("."=0)
+recode mon_fact5 ("."=0)
+recode mon_reca1 ("."=0)
+recode mon_reca2 ("."=0)
+recode mon_reca3 ("."=0)
+recode mon_reca4 ("."=0)
+recode mon_reca5 ("."=0)
 
 
+destring mon_fact1 mon_reca1 mon_fact2 mon_reca2 mon_fact3 mon_reca3 mon_fact4 mon_reca4 mon_fact5 mon_reca5, replace
+
+gene monto_factura_cuota_media = mon_fact1 + mon_fact2 + mon_fact3 + mon_fact4 + mon_fact5
+gene monto_recaudacion_cuota_media = mon_reca1 + mon_reca2 + mon_reca3 + mon_reca4 + mon_reca5
+
+gene rat_recaudacion_factura_c_media = monto_recaudacion_cuota_media/monto_factura_cuota_media
 
 
-
-
+save "data/modified/2021/2021_Merged.dta", replace
 
 
 
